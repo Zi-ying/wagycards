@@ -1,0 +1,17 @@
+.footer {
+  display: flex;
+  width: 100%;
+  border-top: 2px solid grey;
+  justify-content: end;
+  background: white;
+  height: 60px;
+}
+
+.footer p {
+  color: black;
+  font-weight: bold;
+}
+
+.footer img {
+  width: 40px;
+}

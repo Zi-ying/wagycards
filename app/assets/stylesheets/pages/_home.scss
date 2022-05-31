@@ -1,1 +1,31 @@
 // Specific CSS for your home-page
+body {
+  width: 100%;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-color: #CEE1FF;
+}
+
+.container{
+  flex-grow: 1;
+  width: 100vw;
+}
+
+.footer {
+  flex-grow: 0;
+}
+
+.home_presentation {
+  border-top: 10px solid red;
+  background: linear-gradient(90deg, #FFFFFF 0%, #FF2E00 50%, #FA00FF 100%);
+  // (90deg, #FFFFFF 0%, #FF2E00 50%, #FA00FF 100%);
+}
+
+
+.presentation_of{
+  height: 300px;
+}
+// height: 10px;
+//     background: linear-gradient(90deg, #FFFFFF 0%, #FF2E00 50%, #FA00FF 100%);
+// }
