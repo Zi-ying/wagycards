@@ -15,7 +15,7 @@
   justify-content: center;
   align-content: center;
   padding: 20px 20px 10px 20px;
-  height: 70vh;
+  height: 45%;
 }
 
 .card-avatar {
@@ -46,7 +46,7 @@
 .card-infos-center {
   text-align: center;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 18px;
 }
 
 
@@ -71,4 +71,9 @@
   display: inline-block;
   vertical-align: middle;
   font-weight: bold;
+}
+
+.card hr {
+  margin: 15px 0;
+  color: white;
 }

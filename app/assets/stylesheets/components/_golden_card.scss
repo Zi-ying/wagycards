@@ -12,7 +12,7 @@
   justify-content: center;
   align-content: center;
   padding: 20px 20px 10px 20px;
-  height: 70vh;
+  height: 45%;
 }
 
 // Please do not touch this, it is the only way to make a linear gradient for a border
@@ -52,9 +52,8 @@
 .golden-card-infos-center {
   text-align: center;
   font-weight: bold;
-  font-size: 24px;
+  font-size: 18px;
 }
-
 
 .golden-card .golden-card-points {
   position: absolute;
@@ -77,4 +76,9 @@
   display: inline-block;
   vertical-align: middle;
   font-weight: bold;
+}
+
+.card hr {
+  margin: 15px 0;
+  color: white;
 }
