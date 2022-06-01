@@ -1,2 +1,121 @@
-<h1>Pages#home</h1>
-<p>Find me in app/views/pages/home.html.erb</p>
+<div class="home_container">
+
+  <div class="banner">
+  <%# <%= link_to "sign-in", signin_path, class: "login_btn" %>
+    <input type="button" value ="logout" class="login_btn"></button>
+  </div>
+
+  <div class="home_intro">
+    <h1>Collect your alumni!</h1>
+    <h2>play with them and stay in touch</h2>
+    <%= link_to new_game_path do %>
+    <input type="button" value="Play!" class="play_btn">
+    <% end %>
+    <div class="second_banner">
+      <%# <p class="p1">#212</p>
+      <p class="p2">#313</p>
+      <p class="p3">#487</p>
+      <p class="p4">#699</p>
+      <p class="p5">#547</p>
+      <p class="p6">#786</p>
+      <p class="p7">#488</p>
+      <p class="p8">#010</p>
+      <p class="p9">#256</p>
+      <p class="p10">#256</p>
+      <p class="p11">#256</p>
+      <p class="p12">#256</p>
+      <p class="p13">#256</p>
+      <p class="p14">#256</p>
+      <p class="p15">#256</p>
+      <p class="p16">#765</p>
+      <p class="p17">#853</p> %>
+    </div>
+  </div>
+  <%#
+  <input type="button" value="begin" class="login_button">
+  <p><%= f.button :submit, "Book my cutie", class:'btn btn-cutie btn-link' %>
+
+  <div class="card_intro">
+    <h2>Collect, play and build your own project with your alumni</h2>
+    <%= link_to user_session_path do %>
+    <input type="button" value ="begin" class="login_btn_large"></button>
+    <% end %>
+    <h2>Cards collection</h2>
+  </div>
+    <div class="card_collection">
+      <div class="card student_card">
+        <img src="" alt="student card">
+        <p><span class="card_point_description">card alumni student :</span> from 1 to 9 points ! <br>depending on your batch number</p>
+      </div>
+      <div class="card ta_card">
+        <img src="" alt="ta card">
+        <p><span class="card_point_description">card TA :</span> 10 points !</p>
+      </div>
+      <div class="card teacher_card">
+        <img src="" alt="teacher card">
+        <p><span class="card_point_description">card teacher :</span>11 points !</p>
+      </div>
+      <%# <div class="founder_card">
+        <img src="" alt="founder card">
+        <p>card founder</p> %>
+      <%# </div> %>
+    </div>
+
+
+  <div class="home_presentation">
+
+    <div class="presentation_of home_collection">
+
+      <div class="info_text">
+        <h3>Collect digital cards</h3>
+        <div class="line"></div>
+        <p>everyday collect your cards, raise your deck and see your collection</p>
+        <%= link_to new_daily_booster_path do %>
+        <input type="button" value="begin" class="login_btn">
+        <% end %>
+      </div>
+      <div>
+       <%= image_tag("people", alt:"collect people", width:"380px", class:"img_collection")  %>
+      </div>
+    </div>
+
+
+    <div class="presentation_of home_play">
+
+      <div><%= image_tag("people", alt:"collect people", width:"380px", class:"img_collection")  %></div>
+      <div class="info_text">
+        <h3>Play with them</h3>
+        <div class="line"></div>
+        <p>play with alumni from everywhere and collect new cards at each victory</p>
+        <%= link_to new_game_path do %>
+        <input type="button" value="begin" class="login_btn">
+        <% end %>
+      </div>
+    </div>
+
+
+
+    <div class="presentation_of home_connect">
+
+      <div class="info_text">
+        <h3>Connect with alumni</h3>
+        <div class="line"></div>
+        <p>connect with your alumni from everywhere, see their work and start a new collaboration</p>
+        <%= link_to cards_path do %>
+        <input type="button" value="begin" class="login_btn">
+        <% end %>
+      </div>
+      <div><%= image_tag("people", alt:"collect people", width:"380px", class:"img_collection")  %></div>
+    </div>
+
+
+  </div>
+
+</div>
+
+  <div class="footer">
+  <p>Made in Le Wagon with love</p>
+  <%= link_to "home" do %>
+    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+  <% end %>
+  </div>
