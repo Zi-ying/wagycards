@@ -2,9 +2,10 @@
   display: flex;
   width: 100%;
   border-top: 2px solid grey;
-  justify-content: end;
+  justify-content: space-between;
   background: white;
   height: 60px;
+  margin-top: auto;
 }
 
 .footer p {
