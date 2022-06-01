@@ -11,23 +11,30 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
-          <li class="nav-item active">
-            <%= link_to "Home", "#", class: "nav-link" %>
+          <li class="nav-item-lewagon active">
+            <%= link_to "Dashboard", "#", class: "nav-link-lewagon" %>
           </li>
-          <li class="nav-item">
-            <%= link_to "Messages", "#", class: "nav-link" %>
+          <li class="nav-item-lewagon">
+            <%= link_to "Play", root_path, class: "nav-link-lewagon" %>
           </li>
-          <li class="nav-item dropdown">
-            <%= image_tag "https://kitt.lewagon.com/placeholder/users/ssaunier", class: "avatar dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false %>
+          <li class="nav-item-lewagon dropdown">
+            <%= link_to "Cards", "", class: "nav-link-lewagon dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false%>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-              <%= link_to "Action", "#", class: "dropdown-item" %>
-              <%= link_to "Another action", "#", class: "dropdown-item" %>
-              <%= link_to "Log out", destroy_user_session_path, method: :delete, class: "dropdown-item" %>
+              <%= link_to "Daily boosters",  new_daily_booster_path, class: "dropdown-item" %>
+              <%= link_to "All cards",  cards_path, class: "dropdown-item" %>
+              <%= link_to "My cards", user_cards_path, class: "dropdown-item" %>
             </div>
           </li>
+          <li class="nav-item-lewagon">
+            <%= link_to "Logout", destroy_user_session_path, method: :delete, class: "nav-link-lewagon" %>
+          </li>
         <% else %>
-          <li class="nav-item">
-            <%= link_to "Login", new_user_session_path, class: "nav-link" %>
+          <li class="nav-item-lewagon dropdown">
+            <%= link_to "Profile", new_user_session_path, class: "nav-link-lewagon dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false%>
+            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Login",  new_user_session_path, class: "dropdown-item" %>
+              <%= link_to "Register", new_user_registration_path, class: "dropdown-item" %>
+            </div>
           </li>
         <% end %>
       </ul>
