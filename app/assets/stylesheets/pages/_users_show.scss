@@ -1,0 +1,13 @@
+
+.carousel {
+  background-color : red;
+  height: 300px;
+}
+
+.main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  background-color: #edf5ff;
+  padding: 40px 0;
+}
