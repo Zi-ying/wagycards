@@ -31,6 +31,10 @@
 
 .play_btn {
   background-color: #FD1115;
+  text-decoration: none;
+  text-align: center;
+  margin: 16px;
+  padding-top: 8px;
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   height: 64px;
   width: 260px;
@@ -44,6 +48,8 @@
   font-style: normal;
 }
 
+
 .login_btn:hover, .play_btn:hover{
   background-color: #d51316;
+  text-transform: none;
 }

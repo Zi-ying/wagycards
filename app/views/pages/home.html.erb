@@ -8,7 +8,9 @@
   <div class="home_intro">
     <h1>Collect your alumni!</h1>
     <h2>play with them and stay in touch</h2>
+    <%= link_to new_game_path do %>
     <input type="button" value="Play!" class="play_btn">
+    <% end %>
     <div class="second_banner">
       <%# <p class="p1">#212</p>
       <p class="p2">#313</p>
@@ -35,7 +37,9 @@
 
   <div class="card_intro">
     <h2>Collect, play and build your own project with your alumni</h2>
-    <input type="button" value ="login" class="login_btn_large"></button>
+    <%= link_to user_session_path do %>
+    <input type="button" value ="begin" class="login_btn_large"></button>
+    <% end %>
     <h2>Cards collection</h2>
   </div>
     <div class="card_collection">
@@ -66,7 +70,9 @@
         <h3>Collect digital cards</h3>
         <div class="line"></div>
         <p>everyday collect your cards, raise your deck and see your collection</p>
+        <%= link_to new_daily_booster_path do %>
         <input type="button" value="begin" class="login_btn">
+        <% end %>
       </div>
       <div>
        <%= image_tag("people", alt:"collect people", width:"380px", class:"img_collection")  %>
@@ -81,7 +87,9 @@
         <h3>Play with them</h3>
         <div class="line"></div>
         <p>play with alumni from everywhere and collect new cards at each victory</p>
+        <%= link_to new_game_path do %>
         <input type="button" value="begin" class="login_btn">
+        <% end %>
       </div>
     </div>
 
@@ -93,7 +101,9 @@
         <h3>Connect with alumni</h3>
         <div class="line"></div>
         <p>connect with your alumni from everywhere, see their work and start a new collaboration</p>
+        <%= link_to cards_path do %>
         <input type="button" value="begin" class="login_btn">
+        <% end %>
       </div>
       <div><%= image_tag("people", alt:"collect people", width:"380px", class:"img_collection")  %></div>
     </div>
@@ -104,8 +114,8 @@
 </div>
 
   <div class="footer">
-  <p>make with love</p>
-  <%= link_to "home", class: "" do %>
+  <p>Made in Le Wagon with love</p>
+  <%= link_to "home" do %>
     <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
   <% end %>
   </div>
