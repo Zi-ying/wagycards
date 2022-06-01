@@ -20,6 +20,7 @@
           <li class="nav-item-lewagon dropdown">
             <%= link_to "Cards", "", class: "nav-link-lewagon dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false%>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
+              <%= link_to "Daily boosters",  new_daily_booster_path, class: "dropdown-item" %>
               <%= link_to "All cards",  cards_path, class: "dropdown-item" %>
               <%= link_to "My cards", user_cards_path, class: "dropdown-item" %>
             </div>
