@@ -1,7 +1,7 @@
 <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
-    <%= link_to "#", class: "navbar-brand" do %>
-      <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
+    <%= link_to root_path, class: "navbar-brand" do %>
+      <%= image_tag "logo.png" %>
     <% end %>
 
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -12,10 +12,10 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item-lewagon active">
-            <%= link_to "Dashboard", "#", class: "nav-link-lewagon" %>
+            <%= link_to "Dashboard", root_path, class: "nav-link-lewagon" %>
           </li>
           <li class="nav-item-lewagon">
-            <%= link_to "Play", root_path, class: "nav-link-lewagon" %>
+            <%= link_to "Play", new_game_path, class: "nav-link-lewagon" %>
           </li>
           <li class="nav-item-lewagon dropdown">
             <%= link_to "Cards", "", class: "nav-link-lewagon dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false%>
