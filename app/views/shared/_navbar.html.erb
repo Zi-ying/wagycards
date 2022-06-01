@@ -1,4 +1,4 @@
-<%# <div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
+<div class="navbar navbar-expand-sm navbar-light navbar-lewagon">
   <div class="container-fluid">
     <%= link_to root_path, class: "navbar-brand" do %>
       <%# <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
@@ -34,7 +34,7 @@
             <%= link_to "Profile", new_user_session_path, class: "nav-link-lewagon dropdown-toggle", id: "navbarDropdown", data: { bs_toggle: "dropdown" }, 'aria-haspopup': true, 'aria-expanded': false%>
             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
               <%= link_to "Login",  new_user_session_path, class: "dropdown-item" %>
-              <%= link_to "Register", new_user_registration_path, class: "dropdown-item" %>
+              <%= link_to "Register",  new_user_registration_path, class: "dropdown-item" %>
             </div>
           </li>
         <% end %>
