@@ -229,6 +229,25 @@ h1{
   font-weight: bold;
   text-shadow: 0px 0px 1px rgb(7, 7, 7);
 }
+
+.yellow_circle{
+  width: 12px;
+  height: 12px;
+  background-color: yellow;
+  border-radius: 50%;
+}
+.blue_circle{
+  width: 12px;
+  height: 12px;
+  background-color: rgb(47, 0, 255);
+  border-radius: 50%;
+}
+.purple_circle {
+  width: 12px;
+  height: 12px;
+  background-color: rgb(144, 0, 255);
+  border-radius: 50%;
+}
 .home_presentation {
   border-top: 3px groove #FD1115;
   background: linear-gradient(231deg,#fff8f4,#def1ff 50%,#fff8f4);
