@@ -1,0 +1,79 @@
+// If you use me, do not forget to see how I work in views/users/card AND views/users/golden_card
+
+.card {
+  width: 300px;
+  height: 500px;
+  border-radius: 15px;
+  color: white;
+  position: relative;
+  background-color: #FD1015;
+  border: 5px solid white;
+}
+
+.card-img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 20px 20px 10px 20px;
+  height: 45%;
+}
+
+.card-avatar {
+  width: 100%;
+  height: 100%;
+  border: 5px solid white;
+}
+
+.card-infos {
+  padding: 10px 20px 0 20px;
+}
+
+.card-infos h5, h6 {
+  font-size: bold;
+  text-align: center;
+}
+
+.cards-infos p {
+  padding-bottom: 1px;
+}
+
+.card-infos-display {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.card-infos-center {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+
+.card .card-points {
+  position: absolute;
+  top:0;
+  right:0;
+}
+
+.card-points {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #FD1015;
+  text-align: center;
+  margin: 30px 40px;
+  line-height: 50px;
+}
+
+.card-points > p {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.card hr {
+  margin: 15px 0;
+  color: white;
+}

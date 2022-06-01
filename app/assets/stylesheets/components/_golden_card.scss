@@ -1,0 +1,84 @@
+.golden-card {
+  width: 300px;
+  height: 500px;
+  border-radius: 15px;
+  background: linear-gradient(45deg, #FCF6BA, #BF953F);
+  color: white;
+  position: relative;
+}
+
+.golden-card-img {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 20px 20px 10px 20px;
+  height: 45%;
+}
+
+// Please do not touch this, it is the only way to make a linear gradient for a border
+.golden-card-avatar-border {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 75%;
+  height: 100%;
+  background: linear-gradient(45deg, #FCF6BA, #BF953F);
+}
+
+.golden-card-avatar {
+  width: 95%;
+  height: 95%;
+}
+
+.golden-card-infos {
+  padding: 10px 20px 0 20px;
+}
+
+.golden-card-infos h5, h6 {
+  font-size: bold;
+  text-align: center;
+}
+
+.golden-cards-infos p {
+  padding-bottom: 1px;
+}
+
+.golden-card-infos-display {
+  display: flex;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.golden-card-infos-center {
+  text-align: center;
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.golden-card .golden-card-points {
+  position: absolute;
+  top:0;
+  right:0;
+}
+
+.golden-card-points {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: rgba(255, 217, 0, 0.377);
+  color: white;
+  text-align: center;
+  margin: 30px 40px;
+  line-height: 50px;
+}
+
+.golden-card-points > p {
+  display: inline-block;
+  vertical-align: middle;
+  font-weight: bold;
+}
+
+.card hr {
+  margin: 15px 0;
+  color: white;
+}
