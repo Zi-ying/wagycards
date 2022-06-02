@@ -1,9 +1,13 @@
 <div class="card">
   <div class="card-img">
       <div class="card-avatar-border">
-      <%= image_tag 'pexels-ali-pazani-2777898.jpg', class:"card-avatar"%>
+      <%= image_tag card.avatar, class:"card-avatar"%>
       <div class="card-status">
-        <p><%= card.status.first.capitalize %></p>
+        <% if card.status.include?('TA') %>
+          <p><%= card.status %></p>
+        <% else %>
+          <p><%= card.status.first.capitalize %></p>
+        <% end %>
       </div>
     </div>
   </div>
@@ -17,7 +21,7 @@
 
     <div class="card-infos-display">
        <div><%= card.city %></div>
-       <div><%= card.github %></div>
+       <div><%= link_to 'Github', card.github %></div>
     </div>
 
     <hr>
@@ -31,7 +35,7 @@
     <div>
       <div class="card-infos-center">#<%= card.batch %></div>
       <div class="card-infos-display">
-        <p>Le wagon de <%= card.city %></p>
+        <p>Le wagon <%= card.city %></p>
         <p><%= card.batch_date %></p>
       </div>
     </div>

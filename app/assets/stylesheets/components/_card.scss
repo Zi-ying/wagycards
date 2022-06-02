@@ -14,7 +14,7 @@
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 20px 20px 10px 20px;
+  padding: 20px 10px 10px 10px;
   height: 45%;
 }
 
@@ -29,7 +29,7 @@
 }
 
 .card-infos h5, h6 {
-  font-size: bold;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -63,7 +63,7 @@
   background-color: rgba(255, 255, 255, 0.8);
   color: #FD1015;
   text-align: center;
-  margin: 30px 40px;
+  margin: 30px 60px;
   line-height: 50px;
 }
 
