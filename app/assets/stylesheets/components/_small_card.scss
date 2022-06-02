@@ -1,0 +1,59 @@
+// If you use me, do not forget to see how I work in views/users/small_card
+
+.small-card {
+  width: 150px;
+  height: 230px;
+  background-color: #FD1015;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgb(189, 189, 189);
+  border: 3px solid white;
+  position: relative;
+}
+
+.small-card .small-card-sticker {
+  position: absolute;
+  top:0;
+  right:0;
+}
+
+.small-card-sticker {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: rgba(255, 255, 255, 0.8);
+  color: #FD1015;
+  text-align: center;
+  margin: 5px 5px;
+  line-height: 40px;
+  font-weight: bold;
+}
+
+.small-card-img {
+  width:100%;
+  height: 75%;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 12px 12px 0 0;
+  background-size: cover;
+  background-position: center;
+}
+
+.small-card-img p {
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.small-card-infos {
+  width: 100%;
+  height: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.smal-cards-infos-points {
+  color : white;
+  font-weight: bold;
+  text-align: center;
+}
