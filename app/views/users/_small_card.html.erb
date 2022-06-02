@@ -1,9 +1,9 @@
 <div class="small-card">
   <div class="small-card-sticker">
-    <p>A</p>
+    <p><%= card.status %></p>
   </div>
-  <div class="small-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%=asset_path("pexels-ali-pazani-2777898.jpg")%>)">
-    <p>Jean-Jacques Michel</p>
+  <div class="small-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%=asset_path(card.avatar)%>)">
+    <p><%= card.first_name %> <%= card.last_name %></p>
   </div>
   <div class="small-card-infos">
     <div class="smal-cards-infos-points">500</div>

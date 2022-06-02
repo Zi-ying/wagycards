@@ -1,0 +1,6 @@
+function displayCards(html) {
+  const cardsWrapper = document.querySelector("#cards-wrapper")
+  cardsWrapper.innerHTML = html
+}
+
+displayCards("<%= j render "cards/cards", cards: @cards %>")
