@@ -3,21 +3,21 @@
       <div class="card-avatar-border">
       <%= image_tag 'pexels-ali-pazani-2777898.jpg', class:"card-avatar"%>
       <div class="card-status">
-        <p>A</p>
+        <p><%= card.status.first.capitalize %></p>
       </div>
     </div>
   </div>
   <div class="card-infos">
     <div>
-      <h5>Michel Jean Jacques</h5>
-      <h6>Alumnus</h6>
+      <h5><%= card.first_name %> <%= card.last_name %></h5>
+      <h6><%= card.status.capitalize %></h6>
     </div>
 
     <hr>
 
     <div class="card-infos-display">
-       <div>Bordeaux</div>
-       <div>Github-Jackie</div>
+       <div><%= card.city %></div>
+       <div><%= card.github %></div>
     </div>
 
     <hr>
@@ -29,10 +29,10 @@
     <hr>
 
     <div>
-      <div class="card-infos-center">#853</div>
+      <div class="card-infos-center">#<%= card.batch %></div>
       <div class="card-infos-display">
-        <p>Le Wagon Bordeaux</p>
-        <p>janv 22</p>
+        <p>Le wagon de <%= card.city %></p>
+        <p><%= card.batch_date %></p>
       </div>
     </div>
 

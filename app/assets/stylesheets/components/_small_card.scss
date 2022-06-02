@@ -36,12 +36,13 @@
   border-radius: 12px 12px 0 0;
   background-size: cover;
   background-position: center;
+  justify-content: center;
 }
 
-.small-card-img p {
+.small-card-img-text {
   color: white;
   font-weight: bold;
-  text-align: center;
+  // text-align: center;
 }
 
 .small-card-infos {
