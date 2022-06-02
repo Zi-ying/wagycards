@@ -39,7 +39,7 @@ all_links.each do |link|
   first_name = full_name.split()[0]
   last_name = full_name.split()[1]
   description = description.split("DESCRIPTION").dig(1)&.split("SKILL")
-  Card.create(
+  card = Card.new(
     first_name:    first_name,
     last_name:    last_name,
     github:    github,
@@ -50,4 +50,5 @@ all_links.each do |link|
     status:    status,
     description:    description,
   )
+  card.save
 end
