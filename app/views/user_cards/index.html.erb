@@ -1,0 +1,10 @@
+<h1>My cards</h1>
+<% @user.cards.each do |card| %>
+  <%= card.first_name %>
+  <%= card.last_name %>
+  <%= card.github %>
+  <%= card.batch_date %>
+  <%= card.batch %>
+  <%= card.city %>
+  <%= card.status %>
+<% end %>
