@@ -3,11 +3,11 @@
 .card {
   width: 300px;
   height: 500px;
-  border-radius: 15px;
   color: white;
   position: relative;
   background-color: #FD1015;
-  border: 5px solid white;
+  border: 10px solid white;
+  border-radius: 15px;
 }
 
 .card-img {
@@ -50,13 +50,13 @@
 }
 
 
-.card .card-points {
+.card .card-status {
   position: absolute;
   top:0;
   right:0;
 }
 
-.card-points {
+.card-status {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -67,7 +67,7 @@
   line-height: 50px;
 }
 
-.card-points > p {
+.card-status > p {
   display: inline-block;
   vertical-align: middle;
   font-weight: bold;
