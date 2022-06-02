@@ -11,6 +11,30 @@
   box-shadow: 1px 1px 1px rgb(190, 190, 190);
 }
 
+.golden-card {
+  width: 300px;
+  height: 500px;
+  color: white;
+  position: relative;
+  background-color: #FD1015;
+  border: 10px solid #BF953F;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgb(190, 190, 190);
+}
+
+.silver-card {
+  width: 300px;
+  height: 500px;
+  color: white;
+  position: relative;
+  background-color: #FD1015;
+  border: 10px solid #C0C0C0;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgb(190, 190, 190);
+}
+
+
+
 .card-img {
   display: flex;
   justify-content: center;
@@ -50,14 +74,10 @@
   font-size: 18px;
 }
 
-
-.card .card-status {
+.card-status {
   position: absolute;
   top:0;
   right:0;
-}
-
-.card-status {
   width: 50px;
   height: 50px;
   border-radius: 50%;
@@ -68,13 +88,13 @@
   line-height: 50px;
 }
 
-.card-status > p {
+.card-status-text {
   display: inline-block;
   vertical-align: middle;
   font-weight: bold;
 }
 
-.card hr {
+.card-hr {
   margin: 15px 0;
   color: white;
 }
