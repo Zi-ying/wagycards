@@ -1,2 +1,32 @@
-<h1>Users#show</h1>
-<p>Find me in app/views/users/show.html.erb</p>
+<div class="navbar">
+</div>
+<div class="carousel" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%=asset_path("banner_card.jpg")%>)">
+  <% @cards.each do |card| %>
+    <%= link_to cards_path(card), class:'link-to-decoration' do %>
+        <%= render 'shared/small_card', card: card %>
+    <% end %>
+  <% end %>
+</div>
+
+<div class="main">
+  <div class="main-btn">
+    <%= link_to new_daily_booster_path do %>
+      <input type="button" value="Get new cards" class="play_btn">
+    <% end %>
+   <%= link_to user_cards_path do %>
+      <input type="button" value="See my cards" class="play_btn">
+   <% end %>
+   <%= link_to new_game_path do %>
+      <input type="button" value="Play!" class="play_btn">
+   <% end %>
+   <%= link_to cards_path do %>
+      <input type="button" value="See all cards" class="play_btn">
+   <% end %>
+  </div>
+  <% @card.each do |card| %>
+    <%= render 'shared/card', card: card %>
+  <% end %>
+</div>
+
+<div class="footer">
+</div>

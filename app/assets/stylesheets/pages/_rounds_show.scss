@@ -1,0 +1,49 @@
+.container-round {
+  padding: 0px 30px;
+}
+.playground {
+  background: #fd1115;
+  height: 400px;
+  width: 600px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  .logo-wagycards {
+    background-image: asset-url('logo.png');
+    background-position: center;
+    background-size: cover;
+    height: 100px;
+    width: 100px;
+  }
+}
+
+.player {
+  padding: 30px;
+  .info-user {
+    display: flex;
+    justify-content: center;
+  }
+  .info-user p {
+    margin-right: 10px;
+    margin-top: 6px;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: underline;
+  }
+  .info-user img {
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
+  }
+  .cards {
+    padding: 30px 0px;
+    display: flex;
+    justify-content: space-between;
+    .card-user {
+      height: 230px;
+      width: 150px;
+      border-radius: 10px;
+    }
+  }
+}
