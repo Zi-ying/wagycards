@@ -51,4 +51,5 @@ all_links.each do |link|
     description:    description,
   )
   card.save
+  sleep(5)
 end
