@@ -1,12 +1,12 @@
 <div class="index_container">
 
-  <div class="search_bar">Search Bar</div>
-
+    <div class=“search_bar”>Search Bar</div>
   <div class="allcards">
     <% @cards.each do |card| %>
-      <%= link_to cards_path(card), class:'link-to-decoration' do %>
-          <%= render 'shared/small_card', card: card %>
+      <%= link_to card_path(card), class:'link-to-decoration' do %>
+          <%= render 'shared/card', card: card %>
       <% end %>
     <% end %>
+
   </div>
- </div>
+</div>
