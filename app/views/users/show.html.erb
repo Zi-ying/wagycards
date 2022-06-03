@@ -2,7 +2,7 @@
 </div>
 <div class="carousel" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%=asset_path("banner_card.jpg")%>)">
   <% @cards.each do |card| %>
-    <%= link_to cards_path(card), class:'link-to-decoration' do %>
+    <%= link_to card_path(card), class:'link-to-decoration' do %>
         <%= render 'shared/small_card', card: card %>
     <% end %>
   <% end %>

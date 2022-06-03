@@ -1,4 +1,3 @@
-
 <% if card.status.include?('TA') %>
   <div class="silver-card">
     <div class="card-img">
@@ -81,8 +80,8 @@
 
     </div>
   </div>
-<% else %>
-  <div class="card">
+<% elsif card.status.include?('alumni') %>
+  <div class="card-alumni">
     <div class="card-img">
         <div>
         <%= image_tag card.avatar, class:"card-avatar"%>
