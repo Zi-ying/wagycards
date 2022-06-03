@@ -1,4 +1,11 @@
-<%= link_to 'Get my daily cards', daily_boosters_path, method: :post, class: "btn btn-success", remote: true %>
+<% @user_cards.each do |usercard| %>
+    <% if usercard.created_at.today?%>
+      <%= "KO" %>
+    <% else %>
+      <%= link_to 'Get my daily cards', daily_boosters_path, method: :post, class: "btn btn-success", remote: true %>
+    <% end %>
+  <% end %>
+
 
 <div id="cards-wrapper">
 </div>

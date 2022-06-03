@@ -6,17 +6,35 @@
   background-color: #FD1015;
   border-radius: 15px;
   box-shadow: 1px 1px 1px rgb(189, 189, 189);
-  border: 3px solid white;
+  border: 4px solid white;
   position: relative;
 }
 
-.small-card .small-card-sticker {
+.golden-small-card {
+  width: 150px;
+  height: 230px;
+  background-color: #FD1015;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgb(189, 189, 189);
+  border: 4px solid #BF953F;
+  position: relative;
+}
+
+.silver-small-card {
+  width: 150px;
+  height: 230px;
+  background-color: #FD1015;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgb(189, 189, 189);
+  border: 4px solid #C0C0C0;
+  position: relative;
+}
+
+
+.small-card-sticker {
   position: absolute;
   top:0;
   right:0;
-}
-
-.small-card-sticker {
   width: 40px;
   height: 40px;
   border-radius: 50%;
@@ -36,9 +54,10 @@
   border-radius: 12px 12px 0 0;
   background-size: cover;
   background-position: center;
+  justify-content: center;
 }
 
-.small-card-img p {
+.small-card-img-text {
   color: white;
   font-weight: bold;
   text-align: center;
@@ -52,7 +71,7 @@
   align-items: center;
 }
 
-.smal-cards-infos-points {
+.small-cards-infos-points {
   color : white;
   font-weight: bold;
   text-align: center;

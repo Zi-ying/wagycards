@@ -44,26 +44,23 @@
   </div>
     <div class="card_collection">
       <div class="card_intro">
-        <div class="card student_card">
-          <img src="" alt="student card">
-        </div>
-        <p class="yellow_circle"></p>
+            <% card = Card.where(status: "alumni").sample %>
+            <%= render 'shared/card', card: card %>
+        <p class="yellow_circle mt-4"></p>
         <p><span class="card_point_description">card alumni student :</span> from 1 to 9 points ! <br>depending on your batch number</p>
       </div>
 
       <div class="card_intro">
-        <div class="card ta_card">
-          <img src="" alt="ta card">
-        </div>
-        <p class="blue_circle"></p>
+          <% card = Card.where(status: "TA").sample %>
+          <%= render 'shared/card', card: card %>
+        <p class="blue_circle mt-4"></p>
         <p><span class="card_point_description">card TA :</span> 10 points !</p>
       </div>
 
       <div class="card_intro">
-        <div class="card teacher_card">
-          <img src="" alt="teacher card">
-        </div>
-        <p class="purple_circle"></p>
+          <% card = Card.where(status: "Teacher").sample %>
+            <%= render 'shared/card', card: card %>
+        <p class="purple_circle mt-4"></p>
         <p><span class="card_point_description">card teacher :</span>11 points !</p>
       </div>
       <%# <div class="founder_card">
@@ -86,14 +83,14 @@
         <% end %>
       </div>
       <div>
-       <%= image_tag("people", alt:"collect people", width:"380px", class:"img_collection")  %>
+       <%= image_tag("people.png", alt:"collect people", width:"380px", class:"img_collection")  %>
       </div>
     </div>
 
 
     <div class="presentation_of home_play">
 
-      <div><%= image_tag("people", alt:"collect people", width:"380px", class:"img_collection")  %></div>
+      <div><%= image_tag("people.png", alt:"collect people", width:"380px", class:"img_collection")  %></div>
       <div class="info_text">
         <h3>Play with them</h3>
         <div class="line"></div>
@@ -116,7 +113,7 @@
         <input type="button" value="begin" class="login_btn">
         <% end %>
       </div>
-      <div><%= image_tag("people", alt:"collect people", width:"380px", class:"img_collection")  %></div>
+      <div><%= image_tag("people.png", alt:"collect people", width:"380px", class:"img_collection")  %></div>
     </div>
 
 

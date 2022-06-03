@@ -1,0 +1,124 @@
+<% if card.status.include?('TA') %>
+  <div class="silver-card">
+    <div class="card-img">
+        <div>
+        <%= image_tag card.avatar, class:"card-avatar"%>
+        <div class="card-status">
+          <p class="card-status-text"><%= card.status %></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-infos">
+      <div>
+        <h5><%= card.first_name %> <%= card.last_name %></h5>
+        <h6><%= card.status.capitalize %></h6>
+      </div>
+
+      <hr class="card-hr">
+
+      <div class="card-infos-display">
+        <div><%= card.city %></div>
+        <div><%= link_to 'Github', card.github %></div>
+      </div>
+
+      <hr class="card-hr">
+
+      <div>
+        <h6>500 pts</h6>
+      </div>
+
+      <hr class="card-hr">
+
+      <div>
+        <div class="card-infos-center">#<%= card.batch %></div>
+        <div class="card-infos-display">
+          <p>Le wagon <%= card.city %></p>
+          <p><%= card.batch_date %></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% elsif card.status.include?('Teacher') %>
+  <div class="golden-card">
+    <div class="card-img">
+        <div>
+        <%= image_tag card.avatar, class:"card-avatar"%>
+        <div class="card-status">
+          <p class="card-status-text"><%= card.status.first.capitalize %></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-infos">
+      <div>
+        <h5><%= card.first_name %> <%= card.last_name %></h5>
+        <h6><%= card.status.capitalize %></h6>
+      </div>
+
+      <hr class="card-hr">
+
+      <div class="card-infos-display">
+        <div><%= card.city %></div>
+        <div><%= link_to 'Github', card.github %></div>
+      </div>
+
+      <hr class="card-hr">
+
+      <div>
+        <h6>500 pts</h6>
+      </div>
+
+      <hr class="card-hr">
+
+      <div>
+        <div class="card-infos-center">#<%= card.batch %></div>
+        <div class="card-infos-display">
+          <p>Le wagon <%= card.city %></p>
+          <p><%= card.batch_date %></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% elsif card.status.include?('alumni') %>
+  <div class="card-alumni">
+    <div class="card-img">
+        <div>
+        <%= image_tag card.avatar, class:"card-avatar"%>
+        <div class="card-status">
+          <p class="card-status-text"><%= card.status.first.capitalize %></p>
+        </div>
+      </div>
+    </div>
+    <div class="card-infos">
+      <div>
+        <h5><%= card.first_name %> <%= card.last_name %></h5>
+        <h6><%= card.status.capitalize %></h6>
+      </div>
+
+      <hr class="card-hr">
+
+      <div class="card-infos-display">
+        <div><%= card.city %></div>
+        <div><%= link_to 'Github', card.github %></div>
+      </div>
+
+      <hr class="card-hr">
+
+      <div>
+        <h6>500 pts</h6>
+      </div>
+
+      <hr class="card-hr">
+
+      <div>
+        <div class="card-infos-center">#<%= card.batch %></div>
+        <div class="card-infos-display">
+          <p>Le wagon <%= card.city %></p>
+          <p><%= card.batch_date %></p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+<% end %>
