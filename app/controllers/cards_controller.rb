@@ -4,5 +4,6 @@ class CardsController < ApplicationController
   end
 
   def index
+    @cards = Card.all
   end
 end
