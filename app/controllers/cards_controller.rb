@@ -5,7 +5,11 @@ class CardsController < ApplicationController
   end
 
   def index
-    @cards = Card.all
+    if params[:query].present?
+      @cards = Card.search_by_card_characteristic(params[:query])
+    else
+      @cards = Card.all
+    end
   end
 
   private
