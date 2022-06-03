@@ -7,7 +7,7 @@
       <p class="small-card-img-text"><%= card.first_name %> <%= card.last_name %></p>
     </div>
     <div class="small-card-infos">
-      <div class="small-cards-infos-points">500</div>
+      <div class="small-cards-infos-points"><%= card.points %></div>
     </div>
   </div>
 <% elsif card.status.include?('TA') %>
@@ -19,7 +19,7 @@
       <p class="small-card-img-text"><%= card.first_name %> <%= card.last_name %></p>
     </div>
     <div class="small-card-infos">
-      <div class="small-cards-infos-points">500</div>
+      <div class="small-cards-infos-points"><%= card.points %></div>
     </div>
   </div>
 <% else %>
@@ -31,7 +31,7 @@
       <p class="small-card-img-text"><%= card.first_name %> <%= card.last_name %></p>
     </div>
     <div class="small-card-infos">
-      <div class="small-cards-infos-points">500</div>
+      <div class="small-cards-infos-points"><%= card.points %></div>
     </div>
   </div>
 <% end %>
