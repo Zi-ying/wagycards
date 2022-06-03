@@ -1,5 +1,5 @@
 <h1>My cards</h1>
-
+  <%= render 'shared/form_search_user_card' %>
 <div>
   <% @user.cards.each do |card| %>
     <%= render 'shared/card', card: card %>

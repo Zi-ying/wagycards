@@ -61,5 +61,4 @@ all_links.each do |link|
     points:   points
   )
   card.save
-  sleep(5)
 end
