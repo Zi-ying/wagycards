@@ -1,11 +1,37 @@
-<div class="small-card">
-  <div class="small-card-sticker">
-    <p> <%= card.status.first.capitalize %></p>
+<% if card.status.include?('Teacher') %>
+  <div class="golden-small-card">
+    <div class="small-card-sticker">
+      <p><%= card.status.first.capitalize %></p>
+    </div>
+    <div class="small-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%=asset_path(card.avatar)%>)">
+      <p class="small-card-img-text"><%= card.first_name %> <%= card.last_name %></p>
+    </div>
+    <div class="small-card-infos">
+      <div class="small-cards-infos-points">500</div>
+    </div>
   </div>
-  <div class="small-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%=asset_path("pexels-ali-pazani-2777898.jpg")%>)">
-    <p class="small-card-img-text"><%= card.first_name %> <%= card.last_name %></p>
+<% elsif card.status.include?('TA') %>
+  <div class="silver-small-card">
+    <div class="small-card-sticker">
+      <p><%= card.status %></p>
+    </div>
+    <div class="small-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%=asset_path(card.avatar)%>)">
+      <p class="small-card-img-text"><%= card.first_name %> <%= card.last_name %></p>
+    </div>
+    <div class="small-card-infos">
+      <div class="small-cards-infos-points">500</div>
+    </div>
   </div>
-  <div class="small-card-infos">
-    <div class="small-cards-infos-points">500</div>
+<% else %>
+  <div class="small-card">
+    <div class="small-card-sticker">
+      <p><%= card.status.first.capitalize %></p>
+    </div>
+    <div class="small-card-img" style="background-image: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url(<%=asset_path(card.avatar)%>)">
+      <p class="small-card-img-text"><%= card.first_name %> <%= card.last_name %></p>
+    </div>
+    <div class="small-card-infos">
+      <div class="small-cards-infos-points">500</div>
+    </div>
   </div>
-</div>
+<% end %>
