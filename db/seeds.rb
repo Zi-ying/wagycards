@@ -39,6 +39,15 @@ all_links.each do |link|
   first_name = full_name.split()[0]
   last_name = full_name.split()[1]
   description = description.split("DESCRIPTION").dig(1)&.split("SKILL")
+
+  if status == "alumni"
+    points = 10 - batch[0].to_i
+  elsif status == "TA"
+    points = 10
+  else
+    points = 11
+  end
+
   card = Card.new(
     first_name:    first_name,
     last_name:    last_name,
@@ -49,6 +58,7 @@ all_links.each do |link|
     city:    city,
     status:    status,
     description:    description,
+    points:   points
   )
   card.save
   sleep(5)
