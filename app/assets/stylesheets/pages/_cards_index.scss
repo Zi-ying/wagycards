@@ -6,8 +6,13 @@
 }
 .allcards {
   display: flex;
-  justify-content: center;
+  // flex-direction: row;
+  justify-content: space-between;
+  // align-items: center;
   flex-wrap: wrap;
+  // padding-top: 20px;
+  // padding-bottom: 20px;
+
 
 //   // grid-template-rows: repeat(3, 1fr);
 //   // grid-gap: 10px;
