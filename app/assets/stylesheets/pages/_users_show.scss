@@ -1,13 +1,28 @@
-
 .carousel {
-  background-color : red;
+  background-size: cover;
+  background-position: center;
   height: 300px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  padding: 40px 0;
+  margin-top: -20px;
 }
 
 .main {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   background-color: #edf5ff;
   padding: 40px 0;
+}
+
+.main-btn {
+  display: flex;
+  flex-direction: column;
+}
+
+.link-to-decoration {
+  text-decoration: none;
+  color: white;
 }

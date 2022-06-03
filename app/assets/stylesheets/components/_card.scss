@@ -3,18 +3,43 @@
 .card {
   width: 300px;
   height: 500px;
-  border-radius: 15px;
   color: white;
   position: relative;
   background-color: #FD1015;
-  border: 5px solid white;
+  border: 10px solid white;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgb(190, 190, 190);
 }
+
+.golden-card {
+  width: 300px;
+  height: 500px;
+  color: white;
+  position: relative;
+  background-color: #FD1015;
+  border: 10px solid #BF953F;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgb(190, 190, 190);
+}
+
+.silver-card {
+  width: 300px;
+  height: 500px;
+  color: white;
+  position: relative;
+  background-color: #FD1015;
+  border: 10px solid #C0C0C0;
+  border-radius: 15px;
+  box-shadow: 1px 1px 1px rgb(190, 190, 190);
+}
+
+
 
 .card-img {
   display: flex;
   justify-content: center;
   align-content: center;
-  padding: 20px 20px 10px 20px;
+  padding: 20px 10px 10px 10px;
   height: 45%;
 }
 
@@ -29,7 +54,7 @@
 }
 
 .card-infos h5, h6 {
-  font-size: bold;
+  font-weight: bold;
   text-align: center;
 }
 
@@ -49,31 +74,27 @@
   font-size: 18px;
 }
 
-
-.card .card-points {
+.card-status {
   position: absolute;
   top:0;
   right:0;
-}
-
-.card-points {
   width: 50px;
   height: 50px;
   border-radius: 50%;
   background-color: rgba(255, 255, 255, 0.8);
   color: #FD1015;
   text-align: center;
-  margin: 30px 40px;
+  margin: 30px 60px;
   line-height: 50px;
 }
 
-.card-points > p {
+.card-status-text {
   display: inline-block;
   vertical-align: middle;
   font-weight: bold;
 }
 
-.card hr {
+.card-hr {
   margin: 15px 0;
   color: white;
 }

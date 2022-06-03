@@ -12,7 +12,7 @@
       <ul class="navbar-nav me-auto">
         <% if user_signed_in? %>
           <li class="nav-item-lewagon active">
-            <%= link_to "Dashboard", root_path, class: "nav-link-lewagon" %>
+            <%= link_to "Dashboard", user_path(current_user), class: "nav-link-lewagon" %>
           </li>
           <li class="nav-item-lewagon">
             <%= link_to "Play", new_game_path, class: "nav-link-lewagon" %>
