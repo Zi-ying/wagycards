@@ -1,5 +1,6 @@
 <div class="index_container">
 <<<<<<< HEAD
+<<<<<<< HEAD
 
   <div class="search_bar">Search Bar</div>
 
@@ -13,13 +14,17 @@
  </div>
 =======
     <div class=“search_bar”>Search Bar</div>
+=======
+  <%= render 'shared/form_search_index' %>
+>>>>>>> c6887f69db3d27a5e584efd0007327d87bf45f13
   <div class="allcards">
     <% @cards.each do |card| %>
       <%= link_to card_path(card), class:'link-to-decoration' do %>
+        <div class="m-3">
           <%= render 'shared/card', card: card %>
+        </div>
       <% end %>
     <% end %>
 
   </div>
 </div>
->>>>>>> 707aa596abcec4364c3bd5e82e99085d2e7f77cc
