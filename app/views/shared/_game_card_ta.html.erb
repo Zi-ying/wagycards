@@ -1,0 +1,22 @@
+    <div class="game-card">
+      <div class="game-card-image"  style="background-image: url(<%= asset_path(card.avatar)%>)"></div>
+      <div class="game-card-name ta-color"><%= link_to card.first_name, card_path(card) %> <%= link_to card.last_name, card_path(card) %></div>
+
+      <div class="game-card-points ta-bck-color">
+        <div class="one-third ta-border">
+            <div class="one-third-text"><%= card.status.first.capitalize %></div>
+            <div>Status</div>
+        </div>
+
+        <div class="one-third ta-border">
+          <div class="one-third-text">140</div>
+          <div>Points</div>
+        </div>
+
+        <div class="one-third no-border ta-border">
+          <div class="one-third-text"><%= link_to 'G', card.github %></div>
+          <div>GH</div>
+        </div>
+
+      </div>
+    </div>

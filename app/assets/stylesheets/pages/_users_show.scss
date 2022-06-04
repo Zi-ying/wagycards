@@ -1,6 +1,5 @@
 .carousel {
-  background-size: cover;
-  background-position: center;
+  background-color: #333844;
   height: 300px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -13,6 +12,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
+  align-items: center;
   background-color: #edf5ff;
   padding: 40px 0;
 }
@@ -34,4 +34,20 @@ a {
     color: inherit; /* blue colors for links too */
     text-decoration: inherit; /* no underline */
   }
+}
+
+.show-title {
+  color: white;
+  text-align: center;
+  font-weight: 700;
+}
+
+.container-show {
+  padding: 20px;
+}
+
+.container-charts {
+  width: 80%;
+  height: 80%;
+  background-color: white;
 }

@@ -44,29 +44,28 @@
   </div>
     <div class="card_collection">
       <div class="card_intro">
-            <% card = Card.where(status: "alumni").sample %>
-            <%= render 'shared/card', card: card %>
-        <p class="yellow_circle mt-4"></p>
+          <% @card_alumni.map do |card| %>
+            <%= render 'shared/game_card_alumni', card: card %>
+          <% end %>
+        <p class="red_circle mt-4"></p>
         <p><span class="card_point_description">card alumni student :</span> from 1 to 9 points ! <br>depending on your batch number</p>
       </div>
 
       <div class="card_intro">
-          <% card = Card.where(status: "TA").sample %>
-          <%= render 'shared/card', card: card %>
-        <p class="blue_circle mt-4"></p>
+         <% @card_ta.map do |card| %>
+          <%= render 'shared/game_card_ta', card: card %>
+        <% end %>
+        <p class="pink_circle mt-4"></p>
         <p><span class="card_point_description">card TA :</span> 10 points !</p>
       </div>
 
       <div class="card_intro">
-          <% card = Card.where(status: "Teacher").sample %>
-            <%= render 'shared/card', card: card %>
-        <p class="purple_circle mt-4"></p>
-        <p><span class="card_point_description">card teacher :</span>11 points !</p>
+          <% @card_teacher.map do |card| %>
+            <%= render 'shared/game_card_teacher', card: card %>
+          <% end %>
+        <p class="gold_circle mt-4"></p>
+        <p><span class="card_point_description">card teacher :</span> 11 points !</p>
       </div>
-      <%# <div class="founder_card">
-        <img src="" alt="founder card">
-        <p>card founder</p> %>
-      <%# </div> %>
     </div>
 
 

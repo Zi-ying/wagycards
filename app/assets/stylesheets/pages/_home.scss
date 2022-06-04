@@ -37,7 +37,7 @@ h1{
 
 .second_banner{
   margin-top: 40px;
-  width: 1300px;
+  width: 90%;
   height: 300px;
   border-radius: 24px;
   background-color: #f7f7f7;
@@ -230,22 +230,22 @@ h1{
   text-shadow: 0px 0px 1px rgb(7, 7, 7);
 }
 
-.yellow_circle{
+.red_circle{
   width: 12px;
   height: 12px;
-  background-color: yellow;
+  background-color: $A;
   border-radius: 50%;
 }
-.blue_circle{
+.pink_circle{
   width: 12px;
   height: 12px;
-  background-color: rgb(47, 0, 255);
+  background-color: $TA;
   border-radius: 50%;
 }
-.purple_circle {
+.gold_circle {
   width: 12px;
   height: 12px;
-  background-color: rgb(144, 0, 255);
+  background-color: $T;
   border-radius: 50%;
 }
 .home_presentation {
