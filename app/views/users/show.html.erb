@@ -28,10 +28,27 @@
       <input type="button" value="See all cards" class="play_btn btn-effect">
    <% end %>
   </div>
+
   <div class="container-charts">
-    <% @users.each do |user| %>
-      <%= user.email %>
-    <% end %>
+    <div class="container-users">
+        <div class="container-users-online">
+          Players
+        </div>
+      <% @users.each do |user| %>
+        <div class="container-users-online">
+          <% if user.online? == true %>
+            <%= user.email %>
+            <div class="no-padding gold_circle">online</div>
+          <% else %>
+            <%= user.email %>
+            <div class="no-padding red_circle">left</div>
+          <% end %>
+        </div>
+      <% end %>
+    </div>
+    <div class="container-best-players">
+      Best players
+    </div>
   </div>
 </div>
 

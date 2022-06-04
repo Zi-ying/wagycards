@@ -7,4 +7,8 @@ class User < ApplicationRecord
   has_many :participations
   has_many :user_cards
   has_many :cards, through: :user_cards
+
+  def online?
+    updated_at > 2.minutes.ago
+  end
 end

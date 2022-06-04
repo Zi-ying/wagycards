@@ -1,5 +1,8 @@
+$GB: #333844;
+
+
 .carousel {
-  background-color: #333844;
+  background-color: $GB;
   height: 300px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -50,4 +53,25 @@ a {
   width: 80%;
   height: 80%;
   background-color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
 }
+
+.container-users {
+  background-color: $GB;
+  color: white;
+  padding: 20px;
+}
+
+.container-best-players {
+  padding: 20px;
+}
+
+.container-users-online {
+  margin: 3px;
+}
+
+// .no-padding {
+//   padding: -10px 0;
+// }
