@@ -1,34 +1,39 @@
 <div class="home_container">
 
   <div class="banner">
-  <%# <%= link_to "sign-in", signin_path, class: "login_btn" %>
-    <input type="button" value ="logout" class="login_btn"></button>
+    <% if user_signed_in? %>
+      <%= link_to "logout", destroy_user_session_path, class: "login_btn", method: :delete %>
+    <% else %>
+      <%= link_to "login", new_user_session_path, class: "login_btn" %>
+    <% end %>
   </div>
-
   <div class="home_intro">
     <h1>Collect your alumni!</h1>
     <h2>play with them and stay in touch</h2>
     <%= link_to new_game_path do %>
     <input type="button" value="Play!" class="play_btn">
     <% end %>
-    <div class="second_banner">
-      <%# <p class="p1">#212</p>
-      <p class="p2">#313</p>
-      <p class="p3">#487</p>
-      <p class="p4">#699</p>
-      <p class="p5">#547</p>
-      <p class="p6">#786</p>
-      <p class="p7">#488</p>
-      <p class="p8">#010</p>
-      <p class="p9">#256</p>
-      <p class="p10">#256</p>
-      <p class="p11">#256</p>
-      <p class="p12">#256</p>
-      <p class="p13">#256</p>
-      <p class="p14">#256</p>
-      <p class="p15">#256</p>
-      <p class="p16">#765</p>
-      <p class="p17">#853</p> %>
+    <div class="second_banner parallax" data-controller="batch">
+      <div data-action="scroll->batch#move">
+        <p> #853</p>
+        <%# <p class="p1">#212</p>
+        <%# <%# <p class="p2">#313</p> %>
+        <%# <p class="p3">#487</p>
+        <p class="p4">#699</p>
+        <p class="p5">#547</p>
+        <p class="p6">#786</p>
+        <p class="p7">#488</p>
+        <p class="p8">#010</p>
+        <p class="p9">#256</p>
+        <p class="p10">#256</p>
+        <p class="p11">#256</p>
+        <p class="p12">#256</p>
+        <p class="p13">#256</p>
+        <p class="p14">#256</p>
+        <p class="p15">#256</p> %>
+        <%# <p class="p16">#765</p>  %>
+        <%# <p class="p17">#853</p> %>
+      </div>
     </div>
   </div>
   <%#
@@ -37,7 +42,7 @@
 
   <div class="card_intro">
     <h2>Collect, play and build your own project with your alumni</h2>
-    <%= link_to user_session_path do %>
+    <%= link_to user_signed_in? ? user_path(current_user) : new_user_session_path do %>
     <input type="button" value ="begin" class="login_btn_large"></button>
     <% end %>
     <h2>Cards collection</h2>
@@ -48,18 +53,22 @@
             <%= render 'shared/game_card_alumni', card: card %>
           <% end %>
         <p class="red_circle mt-4"></p>
+
         <p><span class="card_point_description">card alumni student :</span> from 1 to 9 points ! <br>depending on your batch number</p>
       </div>
 
       <div class="card_intro">
+
          <% @card_ta.map do |card| %>
           <%= render 'shared/game_card_ta', card: card %>
         <% end %>
         <p class="pink_circle mt-4"></p>
+
         <p><span class="card_point_description">card TA :</span> 10 points !</p>
       </div>
 
       <div class="card_intro">
+
           <% @card_teacher.map do |card| %>
             <%= render 'shared/game_card_teacher', card: card %>
           <% end %>
