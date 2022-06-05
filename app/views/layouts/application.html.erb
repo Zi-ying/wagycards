@@ -16,8 +16,9 @@
   <%# display flex body %>
   <%# min heigth 100hv  %>
   <%# flex grow 1 sur le yield  %>
-    <%# <%= render 'shared/navbar' %>
-    <%= render 'shared/navbar' unless current_page?(controller: 'pages', action: 'home') %>
+    <%# <%= render 'shared/navbar' unless current_page?(controller: 'pages', action: 'home')%>
+
+    <%= render 'shared/navbar'  %>
     <%= render 'shared/flashes' %>
     <%= render 'shared/footer' %>
 

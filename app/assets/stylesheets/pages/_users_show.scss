@@ -11,12 +11,19 @@ $GB: #333844;
   margin-top: -20px;
 }
 
+
+.main-background {
+  background-image: url('wagon.JPG');
+  background-position: center;
+  background-size: cover;
+}
+
 .main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
   align-items: center;
-  background-color: #edf5ff;
+  // background-color: #edf5ff;
   padding: 40px 0;
 }
 
@@ -55,6 +62,7 @@ a {
   background-color: white;
   display: grid;
   grid-template-columns: repeat(2, 1fr);
+  border-radius: 15px;
 
 }
 
@@ -62,6 +70,7 @@ a {
   background-color: $GB;
   color: white;
   padding: 20px;
+  border-radius: 15px 0 0 15px;
 }
 
 .container-best-players {
@@ -71,7 +80,3 @@ a {
 .container-users-online {
   margin: 3px;
 }
-
-// .no-padding {
-//   padding: -10px 0;
-// }
