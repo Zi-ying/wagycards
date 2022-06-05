@@ -13,41 +13,43 @@
   <% end %>
 </div>
 
-<div class="main">
-  <div class="main-btn">
-    <%= link_to new_daily_booster_path do %>
-      <input type="button" value="Get new cards" class="play_btn btn-effect">
-    <% end %>
-   <%= link_to user_cards_path do %>
-      <input type="button" value="See my cards" class="play_btn btn-effect">
-   <% end %>
-   <%= link_to new_game_path do %>
-      <input type="button" value="Play!" class="play_btn btn-effect">
-   <% end %>
-   <%= link_to cards_path do %>
-      <input type="button" value="See all cards" class="play_btn btn-effect">
-   <% end %>
-  </div>
-
-  <div class="container-charts">
-    <div class="container-users">
-        <div class="container-users-online">
-          Players
-        </div>
-      <% @users.each do |user| %>
-        <div class="container-users-online">
-          <% if user.online? == true %>
-            <%= user.email %>
-            <div class="no-padding gold_circle">online</div>
-          <% else %>
-            <%= user.email %>
-            <div class="no-padding red_circle">left</div>
-          <% end %>
-        </div>
+<div class="main-background">
+  <div class="main">
+    <div class="main-btn">
+      <%= link_to new_daily_booster_path do %>
+        <input type="button" value="Get new cards" class="play_btn btn-effect">
+      <% end %>
+      <%= link_to user_cards_path do %>
+          <input type="button" value="See my cards" class="play_btn btn-effect">
+      <% end %>
+      <%= link_to new_game_path do %>
+          <input type="button" value="Play!" class="play_btn btn-effect">
+      <% end %>
+      <%= link_to cards_path do %>
+          <input type="button" value="See all cards" class="play_btn btn-effect">
       <% end %>
     </div>
-    <div class="container-best-players">
-      Best players
+
+    <div class="container-charts">
+      <div class="container-users">
+          <div class="container-users-online">
+            Players
+          </div>
+        <% @users.each do |user| %>
+          <div class="container-users-online">
+            <% if user.online? == true %>
+              <%= user.username %>
+              <div class="no-padding gold_circle">online</div>
+            <% else %>
+              <%= user.username %>
+              <div class="no-padding red_circle">left</div>
+            <% end %>
+          </div>
+        <% end %>
+      </div>
+      <div class="container-best-players">
+        Best players
+      </div>
     </div>
   </div>
 </div>
