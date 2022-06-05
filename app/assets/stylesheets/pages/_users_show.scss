@@ -1,6 +1,8 @@
+$GB: #333844;
+
+
 .carousel {
-  background-size: cover;
-  background-position: center;
+  background-color: $GB;
   height: 300px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -13,6 +15,7 @@
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
+  align-items: center;
   background-color: #edf5ff;
   padding: 40px 0;
 }
@@ -35,3 +38,40 @@ a {
     text-decoration: inherit; /* no underline */
   }
 }
+
+.show-title {
+  color: white;
+  text-align: center;
+  font-weight: 700;
+}
+
+.container-show {
+  padding: 20px;
+}
+
+.container-charts {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+
+}
+
+.container-users {
+  background-color: $GB;
+  color: white;
+  padding: 20px;
+}
+
+.container-best-players {
+  padding: 20px;
+}
+
+.container-users-online {
+  margin: 3px;
+}
+
+// .no-padding {
+//   padding: -10px 0;
+// }

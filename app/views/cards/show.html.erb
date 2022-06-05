@@ -1,3 +1,6 @@
-<h1>This is the card show</h1>
-
-<%= render 'shared/card_simple' %>
+<div class="container-card-show">
+  <h2>This is the card of <%= @card.first_name %> <%= @card.last_name %></h2>
+  <div class="container-card-one">
+    <%= render 'shared/card_simple' %>
+  </div>
+</div>
