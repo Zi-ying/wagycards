@@ -15,9 +15,15 @@ h1{
   padding: 24px;
 }
 
+.login_btn {
+  position: relative;
+  top: 40px;
+  left: 1280px;
+}
 .home_container {
   flex-grow: 1;
   width: 100%;
+  // position: relative;
 }
 
 .home_intro {
@@ -36,15 +42,32 @@ h1{
 }
 
 .second_banner{
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
   margin-top: 40px;
-  width: 1300px;
+  width: 100%;
   height: 300px;
   border-radius: 24px;
   background-color: #f7f7f7;
   color: black;
-  position: relative;
 }
 
+.parallax {
+  background-image: url('wagon.JPG');
+  background-attachment: fixed; /* Fixe l'image pendant le scroll */
+  background-size: cover; /* L'image prendra 100% de l'espace, quitte à la crop */
+  background-position: center; /* Centre la position de l'image */
+  background-repeat: no-repeat; /* Empêche l'image de se répéter en fonction de la taille d'écran */
+  }
+
+// .batch {
+//   position: absolute;
+//   font-size: 42px;
+//   font-weight: bold;
+//   top: 250px;
+//   left: 250px;
+// }
 // .batch_1 {
 //   font-size: 8px;
 //   font-weight: 100;
