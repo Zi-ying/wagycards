@@ -8,18 +8,6 @@ $desktop: 1024px;
 	}
 }
 
-// html {
-//   box-sizing: border-box;
-//   font-size: 62.5%;
-
-//   *,
-//   *:before,
-//   *:after {
-//     box-sizing: inherit;
-//   }
-// }
-
-
 .container-card-index {
 	display: flex;
 	flex-wrap: wrap;
@@ -89,7 +77,6 @@ $desktop: 1024px;
 
 	&__caption {
 		position: absolute;
-		// top: 50%;
 		z-index: 1;
 		padding: 0 10px;
 		color: white;
