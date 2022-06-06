@@ -1,11 +1,15 @@
 <div class="home_container">
 
-  <div class="banner">
-    <% if user_signed_in? %>
-      <%= link_to "logout", destroy_user_session_path, class: "login_btn", method: :delete %>
-    <% else %>
-      <%= link_to "login", new_user_session_path, class: "login_btn" %>
-    <% end %>
+  <div class="banner parallax">
+  <%#   <% if user_signed_in? %>
+      <%# <%= link_to "logout", destroy_user_session_path, class: "login_btn", method: :delete %>
+   <%#  <% else %>
+     <%#  <%= link_to "login", new_user_session_path, class: "login_btn" %>
+   <%#  <% end %>
+    <div class="glowing-text">
+      <span>W</span><span>A</span><span>G</span><span>Y</span><span>C</span><span>A</span><span>R</span><span>D</span><span>S</span>
+
+    </div>
   </div>
   <div class="home_intro">
     <h1>Collect your alumni!</h1>
