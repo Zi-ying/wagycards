@@ -1,34 +1,12 @@
-<div class="index_container">
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 
-  <div class="search_bar">Search Bar</div>
-
-  <div class="allcards">
-    <% @cards.each do |card| %>
-      <%= link_to cards_path(card), class:'link-to-decoration' do %>
-          <%= render 'shared/small_card', card: card %>
-      <% end %>
-    <% end %>
-  </div>
- </div>
-=======
-    <div class=“search_bar”>Search Bar</div>
-=======
+<div class="container-cards-search">
   <%= render 'shared/form_search_index' %>
->>>>>>> c6887f69db3d27a5e584efd0007327d87bf45f13
-=======
-  <%= render 'shared/form_search_index' %>
->>>>>>> b86da956b0f734d79ef16ac58315f25de1b5e93d
-  <div class="allcards">
-    <% @cards.each do |card| %>
-      <%= link_to card_path(card), class:'link-to-decoration' do %>
-        <div class="m-3">
-          <%= render 'shared/card', card: card %>
-        </div>
-      <% end %>
-    <% end %>
+</div>
 
-  </div>
+<div class="container-cards-index">
+  <% @cards.each do |card| %>
+    <%= link_to card_path(card) do %>
+      <%= render 'shared/cards_index', card: card %>
+    <% end %>
+  <% end %>
 </div>

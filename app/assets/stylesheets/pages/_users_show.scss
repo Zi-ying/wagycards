@@ -1,6 +1,8 @@
+$GB: #333844;
+
+
 .carousel {
-  background-size: cover;
-  background-position: center;
+  background-color: $GB;
   height: 300px;
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -9,11 +11,19 @@
   margin-top: -20px;
 }
 
+
+.main-background {
+  background-image: url('wagon.JPG');
+  background-position: center;
+  background-size: cover;
+}
+
 .main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  background-color: #edf5ff;
+  align-items: center;
+  // background-color: #edf5ff;
   padding: 40px 0;
 }
 
@@ -34,4 +44,39 @@ a {
     color: inherit; /* blue colors for links too */
     text-decoration: inherit; /* no underline */
   }
+}
+
+.show-title {
+  color: white;
+  text-align: center;
+  font-weight: 700;
+}
+
+.container-show {
+  padding: 20px;
+}
+
+.container-charts {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 15px;
+
+}
+
+.container-users {
+  background-color: $GB;
+  color: white;
+  padding: 20px;
+  border-radius: 15px 0 0 15px;
+}
+
+.container-best-players {
+  padding: 20px;
+}
+
+.container-users-online {
+  margin: 3px;
 }
