@@ -6,7 +6,7 @@
   <div class="card-infos">
     <div>
       <h5><%= @card.first_name %> <%= @card.last_name %></h5>
-      <h6><%= @card.status.capitalize %></h6>
+      <h6><%= @card.status.upcase %></h6>
     </div>
 
     <hr class="card-hr">
@@ -20,7 +20,7 @@
     <hr class="card-hr">
 
     <div>
-      <h6><%= @card.points %></h6>
+      <h5><%= @card.points %></h5>
     </div>
 
     <hr class="card-hr">
