@@ -76,6 +76,6 @@ filepath = "https://raw.githubusercontent.com/Zi-ying/wagycards/master/db/cards.
 
 serialized_beatles = File.read(filepath)
 
-# results = JSON.parse(serialized_beatles)
+results = JSON.parse(serialized_beatles)
 
-# p results
+p results
