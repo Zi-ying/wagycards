@@ -60,7 +60,8 @@
     <% @cards.map do |card| %>
     <div class="card-index">
       <figure class="card-index__thumb">
-        <img class="card-index__image"> <%= image_tag card.avatar, class:'bck'%>
+        <%# <img class="card-index__image"> %>
+        <%= image_tag card.avatar, class:'bck'%>
         <figcaption class="card-index__caption">
           <h2 class="card-index__title"><%= card.first_name %> <%= card.last_name %></h2>
           <p class="card-index__snippet card-index-text"> to know better <%= card.first_name %> <%= card.last_name %> you can check his/her <%= link_to 'Github', card.github %>, went to <%= card.city %> le Wagon on <%= card.batch_date %> and was in #<%= card.batch %></p>

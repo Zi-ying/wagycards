@@ -1,3 +1,12 @@
-<%= form_tag cards_path, method: :get do %>
-  <%= text_field_tag :query, params[:query], placeholder: "Search card", class: "header__search"%>
+<%= form_tag cards_path, class:"form-index", method: :get do %>
+  <label for="search">Search for stuff</label>
+  <%= text_field_tag :query, params[:query], placeholder: "ex: Name, number, date...", class: "search_bar"%>
+  <button type="submit">Go</button>
 <% end %>
+
+<%# <form onsubmit="event.preventDefault();" role="search" action="/cards" accept-charset="UTF-8" method="get" class="form-index">
+  <input type="text" name="query" id="query" placeholder="ex: Name, number, date..." class="search_bar" autofocus required>
+  <button type="submit">Go</button>
+</form> %>
+
+<%# header_search %>
