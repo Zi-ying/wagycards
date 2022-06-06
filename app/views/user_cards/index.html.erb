@@ -1,7 +1,21 @@
-<h1>My cards</h1>
-  <%= render 'shared/form_search_user_card' %>
 <div>
-  <% @user.cards.each do |card| %>
-    <%= render 'shared/card', card: card %>
-  <% end %>
+  <div class="user-cards-index-text">
+    <h1>My cards</h1>
+  </div>
+
+  <div class="container-cards-search">
+    <%= render 'shared/form_search_user_card' %>
+  </div>
+
+  <div class="container-cards-index problem-height">
+    <% @user.cards.map do |card| %>
+      <% if card.status.include?('alumni') %>
+        <%= render 'shared/game_card_alumni', card: card %>
+      <% elsif card.status.include?('TA') %>
+        <%= render 'shared/game_card_ta', card: card %>
+      <% elsif card.status.include?('Teacher') %>
+        <%= render 'shared/game_card_teacher', card: card %>
+      <% end %>
+    <% end %>
+  </div>
 </div>

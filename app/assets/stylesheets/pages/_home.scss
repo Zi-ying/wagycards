@@ -1,4 +1,7 @@
-// Specific CSS for your home-page
+// // Specific CSS for your home-page
+// html {
+//   width: 100%;
+// }
 
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
@@ -303,11 +306,4 @@ h1{
   width: 190px;
   height: 10px;
   background: linear-gradient(90deg, rgb(77, 244, 255) 0%, transparent 100%);
-}
-
-
-.footer {
-  flex-grow: 0;
-  display: flex;
-  justify-content: flex-end;
 }

@@ -1,11 +1,8 @@
 .footer {
   font-size: 18px;
   // line-height: 18px;
-  // width: 100%;
-  // border-top: 2px solid grey;
-  // justify-content: space-between;
+  width: 100%;
   background: white;
-  height: 60px;
   // margin-top: auto;
   display: flex;
   align-items: center;
@@ -13,15 +10,18 @@
   height: 100px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
-}
+  flex-grow: 0;
+  display: flex;
+  justify-content: flex-end;
 
-.footer p {
-  color: black;
-  font-weight: bold;
-  margin-top: 18px;
-}
+  p {
+    color: black;
+    font-weight: bold;
+    margin-top: 18px;
+  }
 
-.footer img {
-  width: 40px;
-  margin: 8px;
+  img {
+    width: 40px;
+    margin: 8px;
+  }
 }
