@@ -1,0 +1,12 @@
+<% case @game.progress %>
+<% when "pending" %>
+    <%= render "waiting.html.erb" %>
+<% when "playing" %>
+    <%= render "playing.html.erb" %>
+<% when "done" %>
+<%# <% if current_user.participation_cards.round_cards.progress = "win" > current_user.participation_cards.round_cards.progress = "lost" %> %>
+    <%= render "winner.html.erb" %>
+<%# <% else  %> %>
+    <%= render "looser.html.erb" %>
+  <%# <% end %> %>
+<% end %>
