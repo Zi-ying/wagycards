@@ -1,6 +1,3 @@
-<div class="navbar">
-</div>
-
 <div class="carousel">
   <% @cards.map do |card| %>
     <% if card.status.include?('alumni') %>
@@ -32,23 +29,21 @@
 
     <div class="container-charts">
       <div class="container-users">
-          <div class="container-users-online">
-            Players
+          <div class="container-users-players">
+            <p>Players</p>
           </div>
         <% @users.each do |user| %>
-          <div class="container-users-online">
+          <div>
             <% if user.online? == true %>
-              <%= user.username %>
-              <div class="no-padding gold_circle">online</div>
+              <p> <%= user.username %> <span class="online"> online </span></p>
             <% else %>
-              <%= user.username %>
-              <div class="no-padding red_circle">left</div>
+              <p> <%= user.username %> <span class="offline"> offline </span></p>
             <% end %>
           </div>
         <% end %>
       </div>
       <div class="container-best-players">
-        Best players
+        <p>Best players</p>
       </div>
     </div>
   </div>
@@ -73,7 +68,4 @@
     </div>
     <% end %>
   </div>
-</div>
-
-<div class="footer">
 </div>

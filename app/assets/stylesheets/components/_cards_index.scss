@@ -6,6 +6,10 @@
   background: $GB;
 }
 
+.problem-height {
+  height: 100vh;
+}
+
 .container-cards-search {
   display: flex;
 	justify-content: center;
@@ -62,7 +66,9 @@
 .cards-index-infos {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   padding-bottom: -10px;
+  margin-left: -30px;
 
 }
 

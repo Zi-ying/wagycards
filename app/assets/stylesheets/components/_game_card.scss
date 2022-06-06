@@ -74,7 +74,7 @@ $TA: #f37ca3;
 
 .one-third{
   height:100%;
-  padding: 8px 3px;
+  padding: 12px 3px;
   font-size: 12px;
 }
 
@@ -109,4 +109,10 @@ $TA: #f37ca3;
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+.github-icon-game {
+  font-weight: 700;
+  font-size: 30px;
+  padding-top: 4px;
 }
