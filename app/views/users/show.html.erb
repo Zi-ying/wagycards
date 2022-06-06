@@ -36,10 +36,8 @@
           <div>
             <% if user.online? == true %>
               <p> <%= user.username %> <span class="online"> online </span></p>
-              <%# <div class="no-padding gold_circle">online</div> %>
             <% else %>
               <p> <%= user.username %> <span class="offline"> offline </span></p>
-              <%# <div class="no-padding red_circle">left</div> %>
             <% end %>
           </div>
         <% end %>
