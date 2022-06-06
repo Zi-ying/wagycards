@@ -1,5 +1,7 @@
-<%= form_tag user_cards_path, method: :get do %>
+<%= form_tag user_cards_path, class:"form-index", method: :get do %>
+<label for="search">Search for stuff</label>
   <%= text_field_tag :query, params[:query], placeholder: "ex: Name, number, date...", class: "search_bar"%>
+  <button type="submit">Go</button>
 <% end %>
 
 <%# header_search %>
