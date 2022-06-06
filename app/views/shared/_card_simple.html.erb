@@ -11,9 +11,10 @@
 
     <hr class="card-hr">
 
-    <div class="card-infos-display">
-      <div><%= @card.city %></div>
-      <div><%= link_to 'Github', @card.github %></div>
+    <div class="card-infos-center">
+      <%= link_to @card.github do %>
+        <div> <%= fa_icon "github", class:'github-icon' %></div>
+      <% end %>
     </div>
 
     <hr class="card-hr">

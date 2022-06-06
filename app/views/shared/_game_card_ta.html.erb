@@ -4,18 +4,21 @@
 
   <div class="game-card-points ta-bck-color">
     <div class="one-third ta-border">
-        <div class="one-third-text"><%= card.status.first.capitalize %></div>
         <div>Status</div>
+        <div class="one-third-text"><%= card.status.first.capitalize %></div>
     </div>
 
     <div class="one-third ta-border">
-      <div class="one-third-text">140</div>
       <div>Points</div>
+      <div class="one-third-text"><%= card.points %></div>
     </div>
 
     <div class="one-third no-border ta-border">
-      <div class="one-third-text"><%= link_to 'G', card.github %></div>
-      <div>GH</div>
+      <div class="one-third-text">
+       <%= link_to card.github do %>
+         <%= fa_icon "github", class:"github-icon-game"%>
+      <% end %>
+      </div>
     </div>
 
   </div>
