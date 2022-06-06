@@ -43,42 +43,38 @@
   <input type="button" value="begin" class="login_button">
   <p><%= f.button :submit, "Book my cutie", class:'btn btn-cutie btn-link' %>
 
-  <div class="card_intro">
+  <div class="container-collect-begin">
     <h2>Collect, play and build your own project with your alumni</h2>
     <%= link_to user_signed_in? ? user_path(current_user) : new_user_session_path do %>
     <input type="button" value ="begin" class="begin-btn">
     <% end %>
     <h2>Cards collection</h2>
   </div>
-    <div class="card_collection">
-      <div class="card_intro">
-          <% @card_alumni.map do |card| %>
-            <%= render 'shared/game_card_alumni', card: card %>
-          <% end %>
-        <p class="red_circle mt-4"></p>
-
-        <p><span class="card_point_description">card alumni student :</span> from 1 to 9 points ! <br>depending on your batch number</p>
-      </div>
-
-      <div class="card_intro">
-
-         <% @card_ta.map do |card| %>
-          <%= render 'shared/game_card_ta', card: card %>
+  <div class="container-collection">
+    <div class="card-intro-part">
+        <% @card_alumni.map do |card| %>
+          <%= render 'shared/game_card_alumni', card: card %>
         <% end %>
-        <p class="pink_circle mt-4"></p>
-
-        <p><span class="card_point_description">card TA :</span> 10 points !</p>
-      </div>
-
-      <div class="card_intro">
-
-          <% @card_teacher.map do |card| %>
-            <%= render 'shared/game_card_teacher', card: card %>
-          <% end %>
-        <p class="gold_circle mt-4"></p>
-        <p><span class="card_point_description">card teacher :</span> 11 points !</p>
-      </div>
+        <p class="red_circle mt-4"></p>
+        <p><span class="card_point_description">card alumni :</span> from 1 to 9 points ! <br>depending on your batch number</p>
     </div>
+
+    <div class="card-intro-part">
+      <% @card_ta.map do |card| %>
+        <%= render 'shared/game_card_ta', card: card %>
+      <% end %>
+      <p class="pink_circle mt-4"></p>
+      <p><span class="card_point_description">card TA :</span> 10 points !</p>
+    </div>
+
+    <div class="card-intro-part">
+      <% @card_teacher.map do |card| %>
+        <%= render 'shared/game_card_teacher', card: card %>
+      <% end %>
+      <p class="gold_circle mt-4"></p>
+      <p><span class="card_point_description">card teacher :</span> 11 points !</p>
+    </div>
+  </div>
 
 
   <div class="home_presentation">
