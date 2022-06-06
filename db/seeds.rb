@@ -64,19 +64,21 @@
 #   card.save
 # end
 
-# result = Card.all.map do |card|
-#   card.attributes.except('id', 'created_at', 'updated_at')
-# end
-
-# File.open("cards.json", "wb") do |file|
-#   file.write(JSON.generate(result))
-# end
-
-url = "https://raw.githubusercontent.com/Zi-ying/wagycards/master/cards.json"
-results = URI.open(url).read
-
-json = JSON.parse(results)
-
-json.each do |card|
-  Card.create(card)
+result = Card.all.map do |card|
+  card.attributes.except('id', 'created_at', 'updated_at')
 end
+
+
+
+File.open("adriencards.json", "wb") do |file|
+  file.write(JSON.generate(result))
+end
+
+# url = "https://raw.githubusercontent.com/Zi-ying/wagycards/master/cards.json"
+# results = URI.open(url).read
+
+# json = JSON.parse(results)
+
+# json.each do |card|
+#   Card.create(card)
+# end
