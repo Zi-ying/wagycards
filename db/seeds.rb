@@ -64,18 +64,32 @@
 #   card.save
 # end
 
-# result = Card.all.map do |card|
-#   card.attributes.except('id', 'created_at', 'updated_at')
-# end
+result = Card.all.map do |card|
+  card.attributes.except('id', 'created_at', 'updated_at')
+end
 
-# result_str = result.to_json
+# result_str = result.to_json.to_s
 
 # p result_str
 
-filepath = "https://raw.githubusercontent.com/Zi-ying/wagycards/master/db/cards.txt"
 
-serialized_beatles = File.read(filepath)
+# File.open("cards.json", "wb") do |file|
+#   file.write(JSON.generate(result))
+# end
 
-results = JSON.parse(serialized_beatles)
+# filepath = "https://raw.githubusercontent.com/Zi-ying/wagycards/master/db/cards.txt"
 
-p results
+# serialized_beatles = File.read(filepath)
+
+# results = JSON.parse(serialized_beatles)
+
+# p results
+
+url = "https://raw.githubusercontent.com/Zi-ying/wagycards/master/cards.json"
+results = URI.open(url).read
+
+json = JSON.parse(results)
+
+json.each do |card|
+  Card.create(card)
+end
