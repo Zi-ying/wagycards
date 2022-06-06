@@ -14,8 +14,8 @@
   <div class="home_intro">
     <h1>Collect your alumni!</h1>
     <h2>play with them and stay in touch</h2>
-    <%= link_to new_game_path do %>
-    <input type="button" value="Play!" class="play_btn">
+    <%= link_to games_path, method: :post do %>
+      <input type="button" value="Play!" class="play_btn">
     <% end %>
     <div class="second_banner parallax" data-controller="batch">
       <div data-action="scroll->batch#move">
