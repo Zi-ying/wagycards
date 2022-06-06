@@ -1,3 +1,5 @@
 <%= form_tag user_cards_path, method: :get do %>
-  <%= text_field_tag :query, params[:query], placeholder: "Search card", class: "header__search"%>
+  <%= text_field_tag :query, params[:query], placeholder: "ex: Name, number, date...", class: "search_bar"%>
 <% end %>
+
+<%# header_search %>
