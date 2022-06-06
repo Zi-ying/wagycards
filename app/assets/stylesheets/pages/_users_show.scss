@@ -62,7 +62,7 @@ a {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   border-radius: 15px;
-
+  box-shadow: -1px 15px 30px -12px black;
 }
 
 .container-users {
@@ -70,12 +70,32 @@ a {
   color: white;
   padding: 20px;
   border-radius: 15px 0 0 15px;
+  display: grid;
+  align-content: flex-start;
 }
 
 .container-best-players {
   padding: 20px;
+  color: black;
+  font-weight: 700;
+  text-align: center;
 }
 
-.container-users-online {
+.container-users-players {
+  text-align: center;
+  font-weight: 700;
+}
+
+.online {
+  font-style: italic;
+  font-size: 80%;
+  color: greenyellow;
+  margin: 3px;
+}
+
+.offline {
+  font-style: italic;
+  font-size: 80%;
+  color: red;
   margin: 3px;
 }
