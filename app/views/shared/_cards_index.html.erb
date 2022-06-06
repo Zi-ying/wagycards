@@ -5,7 +5,10 @@
       <h2 class="opacity-on opacity-off cards-index-text"> <%= card.first_name %> <%= card.last_name %></h2>
     </div>
     <div class="cards-index-infos">
-      <p class="opacity-on opacity-off"> <%= link_to 'GH', card.github %> </p> </p>
+      <p class="opacity-on opacity-off">
+      <%= link_to card.github do %>
+         <%= fa_icon "github", class:'github-icon' %>
+      <% end %> </p>
       <p class="opacity-on opacity-off"> <%= card.city %> </p>
     </div>
   </div>

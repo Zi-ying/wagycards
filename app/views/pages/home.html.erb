@@ -1,11 +1,15 @@
 <div class="home_container">
 
-  <div class="banner">
-    <% if user_signed_in? %>
-      <%= link_to "logout", destroy_user_session_path, class: "login_btn", method: :delete %>
-    <% else %>
-      <%= link_to "login", new_user_session_path, class: "login_btn" %>
-    <% end %>
+  <div class="banner parallax">
+  <%#   <% if user_signed_in? %>
+      <%# <%= link_to "logout", destroy_user_session_path, class: "login_btn", method: :delete %>
+   <%#  <% else %>
+     <%#  <%= link_to "login", new_user_session_path, class: "login_btn" %>
+   <%#  <% end %>
+    <div class="glowing-text">
+      <span>W</span><span>A</span><span>G</span><span>Y</span><span>C</span><span>A</span><span>R</span><span>D</span><span>S</span>
+
+    </div>
   </div>
   <div class="home_intro">
     <h1>Collect your alumni!</h1>
@@ -43,7 +47,7 @@
   <div class="card_intro">
     <h2>Collect, play and build your own project with your alumni</h2>
     <%= link_to user_signed_in? ? user_path(current_user) : new_user_session_path do %>
-    <input type="button" value ="begin" class="login_btn_large"></button>
+    <input type="button" value ="begin" class="begin-btn">
     <% end %>
     <h2>Cards collection</h2>
   </div>
@@ -128,10 +132,3 @@
   </div>
 
 </div>
-
-  <div class="footer">
-  <p>Made in Le Wagon with love</p>
-  <%= link_to "home" do %>
-    <%= image_tag "https://raw.githubusercontent.com/lewagon/fullstack-images/master/uikit/logo.png" %>
-  <% end %>
-  </div>

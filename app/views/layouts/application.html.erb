@@ -18,10 +18,11 @@
   <%# flex grow 1 sur le yield  %>
     <%# <%= render 'shared/navbar' unless current_page?(controller: 'pages', action: 'home')%>
 
-    <%= render 'shared/navbar'  %>
+    <%# <%= render 'shared/navbar'  %>
+    <%= render 'shared/navbar' unless current_page?(controller: '/pages', action: 'home') %>
     <%= render 'shared/flashes' %>
-    <%= render 'shared/footer' %>
 
     <%= yield %>
+    <%= render "shared/footer" %>
   </body>
 </html>

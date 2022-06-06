@@ -11,21 +11,34 @@
   margin: 16px;
   padding: 11px 16px;
   text-decoration: none;
+  line-height: 20px;
 }
 
-.login_btn_large {
-  background-color: #0066FF;
-  color: white;
-  letter-spacing: 1px;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
-  font-weight: normal;
-  height: 40px;
-  width: 400px;
-  border: none;
+.begin-btn {
+  position: relative;
+  display: inline-block;
+  padding: 20px 81px;
   border-radius: 24px;
-  margin: 16px;
-  padding: 0px 16px;
+  color: #03e9f4;
   text-decoration: none;
+  text-transform: uppercase;
+  overflow: hidden;
+  margin: 25px;
+  font-family: "Roboto", sans-serif;
+  font-weight: bold;
+  filter: hue-rotate(0deg);
+  border: 2px solid #d2bdff;
+  transition: all 0.1s linear;
+  &:hover {
+    // border: 1px solid transparent;
+    background: linear-gradient(231deg,#fff8f4,#83cbff 50%,#fff8f4);
+    border: 2px transparent #9a83cc; ;
+    color: #71ecf1af;
+    font-weight: bold;
+    font-size: 24px;
+    letter-spacing: 3px;
+    text-shadow: 2px 2px 3px #56b8bbaf;
+  }
 }
 
 
