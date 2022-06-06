@@ -3,7 +3,7 @@ class Card < ApplicationRecord
 
   validates :first_name, presence: true
   validates :last_name, presence: true
-  validates :github, presence: true
+  validates :github, presence: true, uniqueness: true
   validates :avatar, presence: true
   validates :batch_date, presence: true
   validates :batch, presence: true
