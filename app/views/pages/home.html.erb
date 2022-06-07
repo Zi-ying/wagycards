@@ -17,26 +17,7 @@
     <%= link_to games_path, method: :post do %>
       <input type="button" value="Play!" class="play_btn">
     <% end %>
-    <div class="second_banner parallax" data-controller="batch">
-      <div data-action="scroll->batch#move">
-        <%# <p class="p1">#212</p>
-        <%# <%# <p class="p2">#313</p> %>
-        <%# <p class="p3">#487</p>
-        <p class="p4">#699</p>
-        <p class="p5">#547</p>
-        <p class="p6">#786</p>
-        <p class="p7">#488</p>
-        <p class="p8">#010</p>
-        <p class="p9">#256</p>
-        <p class="p10">#256</p>
-        <p class="p11">#256</p>
-        <p class="p12">#256</p>
-        <p class="p13">#256</p>
-        <p class="p14">#256</p>
-        <p class="p15">#256</p> %>
-        <%# <p class="p16">#765</p>  %>
-        <%# <p class="p17">#853</p> %>
-      </div>
+    <div class="second_banner parallax">
     </div>
   </div>
   <%#
@@ -78,52 +59,40 @@
 
 
   <div class="home_presentation">
+    <div class="pres-img">
+      <div class="presentation_of">
 
-    <div class="presentation_of home_collection">
-
-      <div class="info_text">
-        <h3>Collect digital cards</h3>
-        <div class="line"></div>
-        <p>everyday collect your cards, raise your deck and see your collection</p>
-        <%= link_to new_daily_booster_path do %>
-        <input type="button" value="begin" class="login_btn">
-        <% end %>
+        <div class="home_collection">
+          <div class="info_text">
+            <h3>Collect digital cards</h3>
+            <div class="line"></div>
+            <p>everyday collect your cards, raise your deck and see your collection</p>
+          </div>
+        </div>
+        <div class="home_play">
+          <div class="info_text">
+            <h3>Play with them</h3>
+            <div class="line"></div>
+            <p>play with alumni from everywhere and collect new cards at each victory</p>
+          </div>
+        </div>
+        <div class="home_connect">
+          <div class="info_text">
+            <h3>Connect with alumni</h3>
+            <div class="line"></div>
+            <p>connect with your alumni from everywhere, see their work and start a new collaboration</p>
+          </div>
+        </div>
       </div>
-      <div>
-       <%= image_tag("people.png", alt:"collect people", width:"380px", class:"img_collection")  %>
+
+      <div class="collection-img">
+        <%= image_tag("collect.png", alt:"collect people", height:"600px") %>
       </div>
     </div>
-
-
-    <div class="presentation_of home_play">
-
-      <div><%= image_tag("people.png", alt:"collect people", width:"380px", class:"img_collection")  %></div>
-      <div class="info_text">
-        <h3>Play with them</h3>
-        <div class="line"></div>
-        <p>play with alumni from everywhere and collect new cards at each victory</p>
-        <%= link_to new_game_path do %>
-        <input type="button" value="begin" class="login_btn">
-        <% end %>
-      </div>
+    <div class="btn-bottom">
+      <%= link_to user_signed_in? ? user_path(current_user) : new_user_session_path do %>
+      <input type="button" value ="begin" class="begin-btn">
+      <% end %>
     </div>
-
-
-
-    <div class="presentation_of home_connect">
-
-      <div class="info_text">
-        <h3>Connect with alumni</h3>
-        <div class="line"></div>
-        <p>connect with your alumni from everywhere, see their work and start a new collaboration</p>
-        <%= link_to cards_path do %>
-        <input type="button" value="begin" class="login_btn">
-        <% end %>
-      </div>
-      <div><%= image_tag("people.png", alt:"collect people", width:"380px", class:"img_collection")  %></div>
-    </div>
-
-
   </div>
-
 </div>

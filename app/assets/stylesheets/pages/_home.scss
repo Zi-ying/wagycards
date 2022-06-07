@@ -128,32 +128,67 @@ h1{
   background-color: $T;
   border-radius: 50%;
 }
+
+
 .home_presentation {
   border-top: 3px groove #FD1115;
-  background: linear-gradient(231deg,#fff8f4,#def1ff 50%,#fff8f4);
+  // background-image: url('sky.jpg');
+  // background: linear-gradient(231deg,#354464, #0f2c42 50%, #333844);
+  background-color: #333844;
+  // background-size: cover;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+
+
+  // background: linear-gradient(231deg,#354464, #2e6e9d 50%, #fff8f4);
+
   // (90deg, #FFFFFF 0%, #FF2E00 50%, #FA00FF 100%);
 }
 
-
-.presentation_of {
-  height: 300px;
+.pres-img {
   display: flex;
   justify-content: space-around;
+  align-items: center;
 }
-
-.info_text{
+.presentation_of {
+  margin: 20px;
+  width: 60%;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
 }
+.home_collection {
+  margin-left: 10%;
+  margin-bottom: 40px;
+}
 
-.img_collection{
-  // margin: 60px;
-  padding: 40px;
+.home_play {
+  margin-left: 15%;
+  margin-bottom: 40px;
+}
+
+.home_connect {
+margin-left: 20%;
+margin-bottom: 40px;
+}
+
+.info_text{
+display: flex;
+flex-direction: column;
+justify-content: space-around;
 }
 
 .line {
-  width: 190px;
-  height: 10px;
-  background: linear-gradient(90deg, rgb(77, 244, 255) 0%, transparent 100%);
+width: 190px;
+height: 10px;
+background: linear-gradient(90deg, rgb(77, 244, 255) 0%, transparent 100%);
+}
+
+.collection-img{
+  margin-top: 20px;
+}
+.btn_bottom {
+  margin-left: 200px;
 }
