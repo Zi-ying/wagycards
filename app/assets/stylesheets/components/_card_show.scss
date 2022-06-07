@@ -1,14 +1,33 @@
-// If you use me, do not forget to see how I work in views/users/card AND views/users/golden_card
 .container-card-show {
   background-color: $GB;
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(1, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   align-content: center;
   justify-content: center;
-  text-align: center;
   color: white;
   padding: 20px;
+
+}
+
+.container-card-description {
+  padding: 40px;
+  h5 {
+    padding: 20px 0;
+    text-shadow: 0px 0px 1px rgb(7, 7, 7);
+  }
+}
+
+.container-card-description-text {
+  display: grid;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.card-show-title {
+  text-align:center;
+  padding: 20px;
+  text-shadow: 0px 0px 1px rgb(7, 7, 7);
 }
 
 .container-card-one {
@@ -20,7 +39,7 @@
 
 .card-show {
   width: 300px;
-  height: 500px;
+  height: 550px;
   color: white;
   position: relative;
   border-radius: 15px;
@@ -76,4 +95,8 @@
 
 .card_separation {
   margin: 25px;
+}
+.github-icon {
+  font-weight: 700;
+  font-size: 40px;
 }

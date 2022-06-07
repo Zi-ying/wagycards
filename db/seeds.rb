@@ -68,14 +68,17 @@
 #   card.attributes.except('id', 'created_at', 'updated_at')
 # end
 
-# result_str = result.to_json
 
-# p result_str
 
-filepath = "https://raw.githubusercontent.com/Zi-ying/wagycards/master/db/cards.txt"
+# File.open("adriencards.json", "wb") do |file|
+#   file.write(JSON.generate(result))
+# end
 
-serialized_beatles = File.read(filepath)
+url = "https://raw.githubusercontent.com/Zi-ying/wagycards/master/adriencards.json"
+results = URI.open(url).read
 
-# results = JSON.parse(serialized_beatles)
+json = JSON.parse(results)
 
-# p results
+json.each do |card|
+  Card.create(card)
+end
