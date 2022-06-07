@@ -1,7 +1,13 @@
-<div data-controller="daily-booster">
-  <%= link_to 'Get my daily cards', daily_boosters_path, method: :post, class: "btn btn-success", remote: true, data: { daily_booster_target: 'a', action: 'click->daily-booster#disabled' } %>
-  <p class="d-none" data-daily-booster-target="p">Booster opened, please waiting end of timer : 00h00 </p>
-</div>
+<% if @can_use_booster %>
+  <%= link_to 'Get my daily cards',
+              daily_boosters_path,
+              method: :post,
+              id: "new_booster_btn",
+              class: "btn btn-success",
+              remote: true %>
+<% else %>
+  <div>Eh non! <%= @next_booster_date.strftime("%d/%m, %H:%M")  %> </div>
+<% end %>
 
 <div id="cards-wrapper">
 </div>

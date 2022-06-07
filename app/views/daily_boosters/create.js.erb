@@ -2,5 +2,11 @@ function displayCards(html) {
   const cardsWrapper = document.querySelector("#cards-wrapper")
   cardsWrapper.innerHTML = html
 }
+function updateButton(date) {
+  console.log(date)
+  const btn = document.querySelector("#new_booster_btn")
+  btn.outerHTML = "Booster opened, please waiting date : <%= @next_booster_date.strftime("%d/%m, %H:%M") %>"
+}
 
+updateButton("<%= j @next_booster_date.strftime("%d/%m, %H:%M") %>")
 displayCards("<%= j render "cards/cards", cards: @cards %>")
