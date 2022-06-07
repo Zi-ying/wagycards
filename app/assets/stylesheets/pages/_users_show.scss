@@ -4,9 +4,9 @@ $GB: #333844;
 .carousel {
   background-color: $GB;
   height: 300px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   padding: 40px 0;
 }
 
