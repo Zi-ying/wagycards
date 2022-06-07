@@ -1,10 +1,6 @@
 <div class="home_container">
 
-<<<<<<< HEAD
-  <div class="banner">
-=======
   <div class="banner parallax">
->>>>>>> 3e9c48bf607a9d49364565613f13e8e5cc899ad0
     <% if user_signed_in? %>
       <%= link_to "logout", destroy_user_session_path, class: "login_btn", method: :delete %>
     <% else %>
@@ -23,7 +19,6 @@
     <% end %>
     <div class="second_banner parallax" data-controller="batch">
       <div data-action="scroll->batch#move">
-
         <%# <p class="p1">#212</p>
         <%# <%# <p class="p2">#313</p> %>
         <%# <p class="p3">#487</p>
