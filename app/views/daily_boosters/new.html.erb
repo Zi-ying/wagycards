@@ -1,11 +1,7 @@
-<% @user_cards.each do |usercard| %>
-    <% if usercard.created_at.today?%>
-      <%= "KO" %>
-    <% else %>
-      <%= link_to 'Get my daily cards', daily_boosters_path, method: :post, class: "btn btn-success", remote: true %>
-    <% end %>
-  <% end %>
-
+<div data-controller="daily-booster">
+  <%= link_to 'Get my daily cards', daily_boosters_path, method: :post, class: "btn btn-success", remote: true, data: { daily_booster_target: 'a', action: 'click->daily-booster#disabled' } %>
+  <p class="d-none" data-daily-booster-target="p">Booster opened, please waiting end of timer : 00h00 </p>
+</div>
 
 <div id="cards-wrapper">
 </div>
