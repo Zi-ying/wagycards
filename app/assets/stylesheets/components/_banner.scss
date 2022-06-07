@@ -1,18 +1,22 @@
+$r : 50px;  // glow radius
+$o : 25px;  // glow offset
+$d : 2s;    // duration
+$chars : 7; // # of letters
+$bg : #111; // background color
+
+$c : cyan yellow tomato;
+
+
 .banner{
   height: 350px;
-  background-image: url('banner_card'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
-  // background-color: black;
+  // background-image: url('banner_card'), linear-gradient(rgba(0,0,0,0.4),rgba(0,0,0,0.4));
+  background-attachment: fixed; /* Fixe l'image pendant le scroll */
+  background-position: bottom; /* Centre la position de l'image */
+  background-repeat: no-repeat; /* Empêche l'image de se répéter en fonction de la taille d'écran */
   background-size: cover;
-  background-position: center;
   width: 100%;
   position: relative;
 
-  // background-image: url("../../images/banner_card.jpg");
-
-  // background-size: cover;
-  // border-bottom: 10px solid black;
-  // display: flex;
-  // align-items: center;
 }
 
 .banner input{
@@ -20,4 +24,45 @@
   top: 20px;
   right:40px;
 
+}
+
+.glowing-text {
+  width:100%;
+  font: 12vw/1 Trebuchet MS;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  height: 108%;
+  text-align: center;
+  color: snow;
+
+  span {
+    animation: glow $d ease-in-out both infinite;
+
+    @for $i from 1 through $chars {
+      &:nth-child(#{$i}) {
+        animation-delay: $i/$chars * -$d;
+      }
+    }
+  }
+
+  @mixin glow($c1, $c2, $c3) {
+    text-shadow:
+      0 0 $r/6 snow,
+      0 (-$o) $r $c3,
+      (-$o) $o $r $c2,
+      $o $o $r $c3;
+  }
+
+  @keyframes glow {
+    0%, 100% {
+      @include glow(nth($c, 1), nth($c, 2), nth($c, 3));
+    }
+    33% {
+      @include glow(nth($c, 2), nth($c, 3), nth($c, 1));
+    }
+    66% {
+      @include glow(nth($c, 3), nth($c, 1), nth($c, 2));
+    }
+  }
 }

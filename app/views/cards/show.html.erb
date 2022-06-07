@@ -1,3 +1,17 @@
-<h1>This is the card show</h1>
+<div class="card-show-title">
+   <h2><%= @card.first_name %> <%= @card.last_name %>'s card</h2>
+</div>
 
-<%= render 'shared/card_simple' %>
+<div class="container-card-show">
+
+  <div class="container-card-one">
+    <%= render 'shared/card_simple' %>
+  </div>
+  <div class="container-card-description">
+    <h5> Description </h5>
+    <div class="container-card-description-text">
+      <%= @card.description.gsub(/[^[:word:]\s]/, '')[1..-1] %>
+      </div>
+  </div>
+
+</div>

@@ -1,19 +1,28 @@
+$GB: #333844;
+
+
 .carousel {
-  background-size: cover;
-  background-position: center;
+  background-color: $GB;
   height: 300px;
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  justify-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
   padding: 40px 0;
-  margin-top: -20px;
+}
+
+
+.main-background {
+  background-image: url('wagon_wall.JPG');
+  background-position: center;
+  background-size: cover;
 }
 
 .main {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   justify-items: center;
-  background-color: #edf5ff;
+  align-items: center;
+  // background-color: #edf5ff;
   padding: 40px 0;
 }
 
@@ -25,4 +34,68 @@
 .link-to-decoration {
   text-decoration: none;
   color: white;
+}
+
+a {
+  color: inherit; /* blue colors for links too */
+  text-decoration: inherit; /* no underline */
+  &:hover {
+    color: inherit; /* blue colors for links too */
+    text-decoration: inherit; /* no underline */
+  }
+}
+
+.show-title {
+  color: white;
+  text-align: center;
+  font-weight: 700;
+}
+
+.container-show {
+  padding: 20px;
+}
+
+.container-charts {
+  width: 80%;
+  height: 80%;
+  background-color: white;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: 15px;
+  box-shadow: -1px 15px 30px -12px black;
+}
+
+.container-users {
+  background-color: $GB;
+  color: white;
+  padding: 20px;
+  border-radius: 15px 0 0 15px;
+  display: grid;
+  align-content: flex-start;
+}
+
+.container-best-players {
+  padding: 20px;
+  color: black;
+  font-weight: 700;
+  text-align: center;
+}
+
+.container-users-players {
+  text-align: center;
+  font-weight: 700;
+}
+
+.online {
+  font-style: italic;
+  font-size: 80%;
+  color: greenyellow;
+  margin: 3px;
+}
+
+.offline {
+  font-style: italic;
+  font-size: 80%;
+  color: red;
+  margin: 3px;
 }

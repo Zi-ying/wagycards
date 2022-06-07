@@ -1,0 +1,15 @@
+<div class="cards-index card-img" style="background-image: url(<%= asset_path(card.avatar)%>)">
+
+  <div class="cards-index-border">
+    <div class="cards-index-infos-h2">
+      <h2 class="opacity-on opacity-off cards-index-text"> <%= card.first_name %> <%= card.last_name %></h2>
+    </div>
+    <div class="cards-index-infos">
+      <p class="opacity-on opacity-off">
+      <%= link_to card.github do %>
+         <%= fa_icon "github", class:'github-icon' %>
+      <% end %> </p>
+      <p class="opacity-on opacity-off"> <%= card.city %> </p>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,93 @@
+
+
+
+
+
+// .search_bar {
+//   color: #fff;
+//   margin: 15px;
+//   padding: 10px;
+//   width: 400px;
+//   background-color: transparent;
+//   border: 8px solid pink;
+//   border-radius: 8px;
+//   &:hover {
+//       color: #fff;
+//       background-color: #d29999;
+//   }
+//   &:focus {
+//     outline: 0;
+//   }
+// }
+
+
+// .search_bar {
+//   color: #ffff;
+//   margin: 15px;
+//   padding: 10px;
+//   width: 500px;
+//   background-color: transparent;
+//   border: 6px solid white;
+//   border-radius: 8px;
+//   &:focus {
+//     outline: 0;
+//   }
+// }
+
+
+// Main styles
+.form-index {
+  position: relative;
+  width: 30rem;
+  background: white;
+  border-radius: 8px;
+
+  input, button {
+    height: 48px;
+    border: 0;
+    color: #222;
+    // font-size: 1.8rem;
+    &:focus {
+      outline: 0;
+    }
+  }
+  input[type="text"] {
+    // outline: 0; // <-- shold probably remove this for better accessibility, adding for demo aesthetics for now.
+    width: 100%;
+    // background: red;
+    padding: 0 1.6rem;
+    border-radius: 8px;
+    appearance: none; //for iOS input[type="search"] roundedness issue. border-radius alone doesn't work
+    transition: all 1s cubic-bezier(0, 0, 0.43, 1.49);
+    transition-property: all;
+    z-index: 1;
+    position: relative;
+  }
+  button {
+    display: none; // prevent being able to tab to it
+    position: absolute;
+    top: 0;
+    right: 0;
+    width: 75px;
+    font-weight: bold;
+    background: #FD1115;
+    border-radius: 0 8px 8px 0;
+    color: white;
+  }
+  input:not(:placeholder-shown) {
+    border-radius: 8 0 0 8;
+    width: calc(100% - 6rem);
+    + button {
+      display: block;
+    }
+  }
+  label {
+    position: absolute;
+    clip: rect(1px, 1px, 1px, 1px);
+    padding: 0;
+    border: 0;
+    height: 1px;
+    width: 1px;
+    overflow: hidden;
+  }
+}
