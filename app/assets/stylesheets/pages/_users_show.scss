@@ -74,9 +74,15 @@ a {
   align-content: flex-start;
 }
 
-.container-best-players {
+.container-best {
   padding: 20px;
   color: black;
+  display: grid;
+  align-content: flex-start;
+}
+
+
+.container-best-players {
   font-weight: 700;
   text-align: center;
 }

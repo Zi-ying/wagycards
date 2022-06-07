@@ -4,5 +4,6 @@ class UsersController < ApplicationController
     @cards = Card.all.sample(3)
     @card = Card.all.sample(1)
     @users = User.all
+    @user_cards = @user.cards.length
   end
 end

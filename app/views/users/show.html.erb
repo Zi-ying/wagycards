@@ -42,8 +42,13 @@
           </div>
         <% end %>
       </div>
-      <div class="container-best-players">
-        <p>Best players</p>
+      <div class="container-best">
+        <div class="container-best-players">
+          <p>Best players</p>
+        </div>
+        <% @users.map do |card| %>
+        <p> <%= card.username %> - <%= card.cards.length %> <%= card.cards.length == 0 || 1 ? 'card' : 'cards' %> </p>
+        <% end %>
       </div>
     </div>
   </div>
