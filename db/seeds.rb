@@ -69,7 +69,6 @@
 # end
 
 
-
 # File.open("adriencards.json", "wb") do |file|
 #   file.write(JSON.generate(result))
 # end
