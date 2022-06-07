@@ -47,7 +47,7 @@
           <p>Best players</p>
         </div>
         <% @users.map do |card| %>
-        <p> <%= card.username %> - <%= card.cards.length %> <%= card.cards.length == 0 || 1 ? 'card' : 'cards' %> </p>
+        <p> <%= card.username %> - <%= card.cards.length %> <%= card.cards.length <= 1 ? 'card' : 'cards' %> </p>
         <% end %>
       </div>
     </div>
