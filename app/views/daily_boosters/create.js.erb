@@ -5,7 +5,7 @@ function displayCards(html) {
 function updateButton(date) {
   console.log(date)
   const btn = document.querySelector("#new_booster_btn")
-  btn.outerHTML = "Booster opened, please waiting date : <%= @next_booster_date.strftime("%d/%m, %H:%M") %>"
+  btn.outerHTML = "animation"
 }
 
 updateButton("<%= j @next_booster_date.strftime("%d/%m, %H:%M") %>")

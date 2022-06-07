@@ -1,0 +1,22 @@
+
+.daily-wrapper{
+  background: linear-gradient(231deg, #354464, #0c2436 50%, #1d1d1d);
+}
+
+.daily_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.daily_show{
+  display: flex;
+  justify-content: space-around;
+  margin: 32px;
+}
+
+.booster_cards {
+  display: flex;
+  justify-content: space-around;
+}
