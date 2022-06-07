@@ -70,41 +70,44 @@ h1{
   }
 
 
-.card_intro {
+.container-collect-begin {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
+  padding: 20px;
+
+  h2 {
+    font-size: 32px;
+    font-weight: bold;
+    border-top: 3px solid white;
+    text-align: center;
+    padding: 20px;
+  }
 }
 
-.card_intro h2 {
-  font-size: 32px;
-  font-weight: bold;
-  border-top: 3px black solid;
-}
 
-// .card_intro p{
-//   font-size: 16px;
-//   top: 400px;
-//   right: 30px;
-// }
-
-.card_collection {
+.container-collection {
   display: flex;
-  justify-content: space-around;
-  padding: 24px;
-  margin: 24px;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-content: center;
+  padding: 10px;
 }
 
-.card {
+
+.card-intro-part {
+  margin: 0 50px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
+  align-items: center;
+  width: 200px;
 }
 
+
 .card_point_description {
-  font-weight: bold;
-  text-shadow: 0px 0px 1px rgb(7, 7, 7);
+  font-weight: 700;
 }
 
 .red_circle{

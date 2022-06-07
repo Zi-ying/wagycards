@@ -17,27 +17,39 @@
 .begin-btn {
   position: relative;
   display: inline-block;
-  padding: 20px 81px;
-  border-radius: 24px;
+  padding: 15px 70px;
+  border-radius: 30px;
   color: #03e9f4;
   text-decoration: none;
   text-transform: uppercase;
   overflow: hidden;
   margin: 25px;
+  margin-bottom: 40px;
   font-family: "Roboto", sans-serif;
-  font-weight: bold;
+  font-weight: 700;
+  font-size: 22px;
   filter: hue-rotate(0deg);
-  border: 2px solid #d2bdff;
+  // border: 2px solid #d2bdff;
+  // border: 1px solid $TA;
+  background-color: $TA;
+  background-image: linear-gradient(315deg, #fda9c5 35%, #fcfcfc 75%);
   transition: all 0.1s linear;
+  text-shadow: 1px 1px 2px $TA;
+  border: none;
   &:hover {
     // border: 1px solid transparent;
-    background: linear-gradient(231deg,#fff8f4,#83cbff 50%,#fff8f4);
-    border: 2px transparent #9a83cc; ;
-    color: #71ecf1af;
-    font-weight: bold;
+    background-color: $TA;
+    background-image: linear-gradient(315deg, #fda9c5 35%, #89efec 75%);
+    // background: linear-gradient(231deg,#fff8f4,#83cbff 50%,#fff8f4);
+    // border: 2px transparent #9a83cc;
+    border: 2px transparent #f9568c;
+    text-shadow: 1px 1px 2px #f9568c  ;
+    color:  #03e9f4;
+    font-weight: 700;
+    border-radius: 34px;
     font-size: 24px;
     letter-spacing: 3px;
-    text-shadow: 2px 2px 3px #56b8bbaf;
+    // text-shadow: 2px 2px 3px #56b8bbaf;
   }
 }
 
