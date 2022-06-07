@@ -10,11 +10,13 @@
 }
 
 .container-cards-index-display {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-evenly;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-gap: 20px;
+  justify-content: center;
   background: $GB;
   width: 100%;
+  padding-left: 80px;
 }
 
 .container-cards-search {
