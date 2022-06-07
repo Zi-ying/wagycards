@@ -5,7 +5,13 @@
 <div class="container-card-show">
 
   <div class="container-card-one">
-    <%= render 'shared/card_simple' %>
+  <% if @card.status.include?('alumni') %>
+    <%= render 'shared/card_simple_alumni' %>
+  <% elsif @card.status.include?('TA') %>
+    <%= render 'shared/card_simple_ta' %>
+  <% elsif @card.status.include?('Teacher') %>
+    <%= render 'shared/card_simple_teacher' %>
+  <% end %>
   </div>
   <div class="container-card-description">
     <h5> Description </h5>
