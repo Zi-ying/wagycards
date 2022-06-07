@@ -5,8 +5,6 @@ $T: #BF953F;
 $A: #FD1015;
 $TA: #f37ca3;
 
-
-
 .game-card {
   background: white;
   width: 150px;
@@ -30,6 +28,7 @@ $TA: #f37ca3;
 }
 
 .game-card-name {
+  background-color: white;
   text-transform: uppercase;
   font-size: 12px;
   font-weight: 700;

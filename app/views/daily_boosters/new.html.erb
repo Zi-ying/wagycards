@@ -1,3 +1,16 @@
+
+<% if @can_use_booster %>
+  <%= link_to 'Get my daily cards',
+              daily_boosters_path,
+              method: :post,
+              id: "new_booster_btn",
+              class: "btn btn-success",
+              remote: true %>
+<% else %>
+  <div>Eh non! <%= @next_booster_date.strftime("%d/%m, %H:%M")  %> </div>
+<% end %>
+
+<div id="cards-wrapper">
 <div class="user-cards-index-text">
   <h1>My daily cards</h1>
 </div>
@@ -12,4 +25,5 @@
       <%# <%= render 'shared/game_card_teacher', card: card %>
     <%# <% end %>
   <%# <% end %>
+
 </div>
