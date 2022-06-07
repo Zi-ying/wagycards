@@ -6,4 +6,8 @@ class Game < ApplicationRecord
   def winner
     # self.rounds.count{|round| round.winner}.order.first #&:winner
   end
+
+  def opponent_for(user)
+    self.participations.where.not(user: user).last.user
+  end
 end
