@@ -2,12 +2,12 @@
   font-size: 18px;
   // line-height: 18px;
   width: 100%;
-  background: white;
+  background: snow;
   // margin-top: auto;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  height: 100px;
+  height: 65px;
   padding: 0px 50px;
   color: rgba(0,0,0,0.3);
   flex-grow: 0;
@@ -16,8 +16,8 @@
 
   p {
     color: black;
-    font-weight: bold;
-    margin-top: 18px;
+    font-weight: 400;
+    margin-top: 14px;
   }
 
   img {
