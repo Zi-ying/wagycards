@@ -2,12 +2,19 @@
   display: flex;
 	flex-wrap: wrap;
 	justify-content: center;
-	width: 100%;
   background: $GB;
 }
 
 .problem-height {
-  height: 100vh;
+  min-height: 100vh;
+}
+
+.container-cards-index-display {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  background: $GB;
+  width: 100%;
 }
 
 .container-cards-search {
@@ -16,7 +23,6 @@
   align-content: center;
   padding: 20px;
   margin: 30px;
-	width: 100%;
   background: $GB;
 }
 
