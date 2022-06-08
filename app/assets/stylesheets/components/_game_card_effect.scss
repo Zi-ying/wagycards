@@ -2,10 +2,10 @@
 
 $border-radius-size: 14px;
 $T: #BF953F;
-$A: #FD1015;
-$TA: #f37ca3;
 
-.game-card-effect {
+
+.founder-game-card-effect {
+  background-color:#fff;
   width: 150px;
   height: 230px;
   border-radius: $border-radius-size + 5;
@@ -18,42 +18,35 @@ $TA: #f37ca3;
   }
 }
 
-.game-card-name-effect {
-  background-color:#fff;
-  text-transform: uppercase;
-  font-size: 12px;
-  font-weight: 700;
-  margin: 3px 0;
-  animation: neon1 3.5s ease-in-out infinite alternate;
-}
 
-
-.ta-bck-color-effect {
-  background-color: $TA;
-  background-image: linear-gradient(315deg, #fda9c5 35%, #89efec 75%);
-}
-.alumni-bck-color-effect {
-  background-color: $A;
-  // background-image: linear-gradient(315deg, #FD1015 35%, #eb5f61 75%);
-  animation: neon1 1.5s ease-in-out infinite alternate;
-}
-.teacher-bck-color-effect {
+.founder-bck-color-effect {
   background-color: #d09d1f;
   background-image: linear-gradient(315deg, #d09d1f 35%, #ebbd47 74%);
 }
 
+.founder-color {
+  color: $T;
+}
+
+.founder-border {
+  border-right: 1px solid white;
+}
+
+.no-border {
+  border-right: none;
+}
 
 @keyframes neon1 {
   from {
-    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #7d083a,
-      0 0 70px #ff1177, 0 0 80px #ff1177, 0 0 100px #ff1177, 0 0 300px #ff1177;
-     box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
-    0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 100px #ff1177;
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #d09d1f,
+      0 0 70px #d09d1f, 0 0 80px #d09d1f, 0 0 100px #d09d1f, 0 0 300px #d09d1f;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #d09d1f,
+      0 0 35px #d09d1f, 0 0 40px #d09d1f, 0 0 50px #d09d1f, 0 0 100px #d09d1f;
   }
   to {
     text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
       0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 100px #ff1177;
-    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
-    0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 100px #ff1177;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #d09d1f,
+    0 0 35px #d09d1f, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 100px #ff1177;
   }
 }

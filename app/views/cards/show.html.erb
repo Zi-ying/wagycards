@@ -11,13 +11,14 @@
     <%= render 'shared/card_simple_ta' %>
   <% elsif @card.status.include?('Teacher') %>
     <%= render 'shared/card_simple_teacher' %>
+  <% elsif @card.status.include?('Founder') %>
+    <%= render 'shared/card_simple_founder' %>
   <% end %>
   </div>
   <div class="container-card-description">
     <h5> Description </h5>
     <div class="container-card-description-text">
       <%= @card.description.gsub(/[^[:word:]\s]/, '')[1..-1] %>
-      </div>
+    </div>
   </div>
-
 </div>

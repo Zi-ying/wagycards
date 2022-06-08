@@ -1,29 +1,31 @@
 <div class="carousel">
   <% @cards.map do |card| %>
     <% if card.status.include?('alumni') %>
-        <%= render 'shared/game_card_alumni', card: card %>
+      <%= render 'shared/game_card_alumni', card: card %>
     <% elsif card.status.include?('TA') %>
       <%= render 'shared/game_card_ta', card: card %>
     <% elsif card.status.include?('Teacher') %>
       <%= render 'shared/game_card_teacher', card: card %>
+    <% elsif card.status.include?('Founder') %>
+      <%= render 'shared/game_card_founder', card: card %>
     <% end %>
   <% end %>
 </div>
 
 <div class="main-background">
   <div class="main">
-    <div class="main-btn">
+    <div class="main-container-btn">
       <%= link_to new_daily_booster_path do %>
-        <input type="button" value="Get new cards" class="play_btn btn-effect">
+        <input type="button" value="Get new cards" class="main-btn btn-effect">
       <% end %>
       <%= link_to user_cards_path do %>
-          <input type="button" value="See my cards" class="play_btn btn-effect">
+          <input type="button" value="See my cards" class="main-btn btn-effect">
       <% end %>
       <%= link_to new_game_path do %>
-          <input type="button" value="Play!" class="play_btn btn-effect">
+          <input type="button" value="Play!" class="main-btn btn-effect">
       <% end %>
       <%= link_to cards_path do %>
-          <input type="button" value="See all cards" class="play_btn btn-effect">
+          <input type="button" value="See all cards" class="main-btn btn-effect">
       <% end %>
     </div>
 
