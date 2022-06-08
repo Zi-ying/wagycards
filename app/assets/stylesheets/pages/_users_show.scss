@@ -12,7 +12,7 @@ $GB: #333844;
 
 
 .main-background {
-  background-image: url('wintery-sunburst.png');
+  background-image: url('wagon_wall.JPG');
   background-position: center;
   background-size: cover;
 }
@@ -26,7 +26,7 @@ $GB: #333844;
   padding: 40px 0;
 }
 
-.main-btn {
+.main-container-btn {
   display: flex;
   flex-direction: column;
 }
@@ -106,4 +106,25 @@ a {
   font-size: 80%;
   color: red;
   margin: 3px;
+}
+
+
+
+.main-btn {
+  background-color: #4D04c4;
+  text-decoration: none;
+  text-align: center;
+  margin: 16px;
+  padding-top: 8px;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+  height: 64px;
+  width: 260px;
+  padding: 0px 16px;
+  color: white;
+  border: none;
+  border-radius: 14px;
+  font-size: 24px;
+  min-width: 64px;
+  box-sizing: border-box;
+  font-style: normal;
 }
