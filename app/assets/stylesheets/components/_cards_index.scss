@@ -2,6 +2,9 @@
   display: flex;
 	flex-wrap: wrap;
   background: $GB;
+  grid-gap: 30px 30px;
+  padding: 20px;
+  justify-content: center;
 }
 
 .problem-height {
