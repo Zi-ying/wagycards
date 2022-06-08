@@ -7,4 +7,6 @@ class PagesController < ApplicationController
     @card_teacher = Card.all.where(status: 'Teacher').sample(1)
     @card_founder = Card.all.where(status: 'Founder').sample(1)
   end
+  def rules
+  end
 end
