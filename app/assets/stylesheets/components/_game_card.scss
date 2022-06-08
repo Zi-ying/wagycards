@@ -13,6 +13,10 @@ $TA: #f37ca3;
   text-align: center;
   box-shadow: -1px 15px 30px -12px black;
   font: 14px/20px "Lato", Arial, sans-serif;
+
+}
+
+.game-card-hover {
   &:hover {
     animation: shake 1s;
   }

@@ -1,8 +1,14 @@
 <div class="booster_cards" data-controller="daily-booster">
   <% @cards.each do |card| %>
-    <%# <%= render 'shared/card_simple', card: user_card.card %>
-    <%= render 'shared/card_simple', card: card %>
-    <%# <%= card.first_name %>
-    <%# <%= card.last_name %>
+    <% if card.status.include?('alumni') %>
+      <%= render 'shared/booster_card_alumni', card: card %>
+    <% elsif card.status.include?('TA') %>
+      <%= render 'shared/booster_card_ta', card: card %>
+    <% elsif card.status.include?('Teacher') %>
+      <%= render 'shared/booster_card_teacher', card: card %>
+    <% elsif card.status.include?('Founder') %>
+      <%=render 'shared/booster_card_founder', card: card %>
+    <% end %>
+
   <% end %>
 </div>

@@ -1,16 +1,20 @@
-    <div class="founder-game-card-effect game-card-hover">
+<div class="flip-card" data-daily-booster-target="card">
+  <div class="flip-card-inner">
+    <div class="flip-card-front card_back crossrotate">
+    </div>
+    <div class="flip-card-back founder-game-card-effect">
       <div class="game-card-image"  style="background-image: url(<%=asset_path(card.avatar)%>)"></div>
       <div class="game-card-name founder-color"><%= link_to card.first_name, card_path(card) %> <%= link_to card.last_name, card_path(card) %></div>
 
       <div class="game-card-points founder-bck-color-effect">
         <div class="one-third founder-border">
-          <div>Status</div>
+            <div>Status</div>
             <div class="one-third-text"><%= card.status.first.capitalize %></div>
         </div>
 
         <div class="one-third founder-border">
           <div>Points</div>
-          <div class="one-third-text"><%= card.points %></div>
+          <div class="one-third-text"> <%= card.points %></div>
         </div>
 
         <div class="one-third no-border founder-border">
@@ -20,5 +24,6 @@
             <% end %>
           </div>
         </div>
+
       </div>
     </div>
