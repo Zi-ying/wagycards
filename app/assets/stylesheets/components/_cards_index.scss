@@ -2,22 +2,25 @@
   display: flex;
 	flex-wrap: wrap;
   background: $GB;
+  grid-gap: 30px;
+  padding: 20px;
+  justify-content: center;
 }
 
 .problem-height {
   min-height: 100vh;
 }
 
-.container-cards-index-display {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  grid-gap: 40px 10px;
-  justify-items: center;
-  background: $GB;
-  width: 100%;
-  margin-bottom: 20px;
-  padding: 0 60px;
-}
+// .container-cards-index-display {
+//   display: grid;
+//   grid-template-columns: repeat(4, 1fr);
+//   grid-gap: 40px 10px;
+//   justify-items: center;
+//   background: $GB;
+//   width: 100%;
+//   margin-bottom: 20px;
+//   padding: 0 60px;
+// }
 
 .container-cards-search {
   display: flex;
