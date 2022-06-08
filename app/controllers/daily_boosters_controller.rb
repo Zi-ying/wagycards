@@ -14,7 +14,7 @@ class DailyBoostersController < ApplicationController
   def create
     @cards = Card.order(Arel.sql('RANDOM()')).first(4)
     @daily_booster = @cards.each { |card| current_user.user_cards.create(card: card) }
-    cookies[:booster] = JSON.generate({ user_id: current_user.id, time: Time.now })
+    # cookies[:booster] = JSON.generate({ user_id: current_user.id, time: Time.now })
     @next_booster_date = 24.hours.since
     respond_to do |format|
       format.html { redirect_to user_cards_path }
