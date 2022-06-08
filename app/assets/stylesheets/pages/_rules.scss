@@ -1,0 +1,20 @@
+.container-rules {
+  width: 800px;
+  text-align: center;
+  margin: auto;
+  padding-bottom: 50px;
+  .rules {
+    p {
+      padding: 10px;
+      font-size: 18px;
+    }
+  }
+  .btn-play {
+    background-color: #fd1115;
+    cursor: pointer;
+    color: white;
+    margin-top: 20px;
+    padding: 10px 30px;
+    border-radius: 5px;
+  }
+}
