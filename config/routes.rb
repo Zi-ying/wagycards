@@ -10,4 +10,5 @@ Rails.application.routes.draw do
   resources :rounds, only: [:show] do
     resources :round_cards, only: [:create]
   end
+  get "/next-round/:game_id", to: "rounds#next", as: "next_round"
 end

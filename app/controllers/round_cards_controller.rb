@@ -5,6 +5,11 @@ class RoundCardsController < ApplicationController
     participation_card = ParticipationCard.find(selected_card)
     @round_card = RoundCard.new(round: @round, participation_card: participation_card, progress: "available")
     @round_card.save
-    redirect_to round_path(@round)
+    @finished = @round.finished_for?(current_user)
+    if @finished
+      flash[:alert] = "round winner : #{@round.winner.username}"
+      @round.game.update(progress: "done") if @round.game.is_finished?
+    end
+    redirect_to round_path(@round.game.rounds.last)
   end
 end

@@ -7,9 +7,9 @@ class GamesController < ApplicationController
       @game.save
     else
       @game = Game.create(progress: "pending")
+      @round = Round.create(game: @game)
     end
     Participation.create(user: current_user, game: @game)
-    @round = Round.create(game: @game)
-    redirect_to round_path(@round)
+    redirect_to round_path(@game.rounds.last)
   end
 end
