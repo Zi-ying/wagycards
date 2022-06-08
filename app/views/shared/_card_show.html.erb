@@ -1,0 +1,36 @@
+
+<div class="card-show">
+  <div class="card-img" style="background-image: url( <%= asset_path(@card.avatar)%>) ">
+  </div>
+
+  <div class="card-infos">
+    <div>
+      <h5><%= @card.first_name %> <%= @card.last_name %></h5>
+      <h6><%= @card.status.upcase %></h6>
+    </div>
+
+    <hr class="card-hr">
+
+    <div class="card-infos-center">
+      <%= link_to @card.github do %>
+        <div> <%= fa_icon "github", class:'github-icon' %></div>
+      <% end %>
+    </div>
+
+    <hr class="card-hr">
+
+    <div>
+      <h5><%= @card.points %></h5>
+    </div>
+
+    <hr class="card-hr">
+
+    <div>
+      <div class="card-infos-center"> <p>#<%= @card.batch %></p></div>
+      <div class="card-infos-display">
+          <p>Le wagon <%= @card.city %></p>
+          <p><%= @card.batch_date %></p>
+        </div>
+      </div>
+    </div>
+  </div>

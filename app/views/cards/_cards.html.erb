@@ -1,8 +1,8 @@
-<% @cards.each do |card| %>
-    <div class="problem-height daily_show">
-    <%# <%= render 'shared/card_simple'%>
-    <%# <%= render 'shared/game_card_alumni', card: participation_card.user_card.card %>
-    <%= card.first_name %>
-    <%= card.last_name %>
-  </div>
-<% end %>
+<div class="booster_cards" data-controller="daily-booster">
+  <% @cards.each do |card| %>
+    <%# <%= render 'shared/card_simple', card: user_card.card %>
+    <%= render 'shared/card_simple', card: card %>
+    <%# <%= card.first_name %>
+    <%# <%= card.last_name %>
+  <% end %>
+</div>

@@ -5,6 +5,9 @@
 <div class="container-card-show">
 
   <div class="container-card-one">
+<<<<<<< HEAD
+    <%= render 'shared/card_show', card: @card %>
+=======
   <% if @card.status.include?('alumni') %>
     <%= render 'shared/card_simple_alumni' %>
   <% elsif @card.status.include?('TA') %>
@@ -14,6 +17,7 @@
   <% elsif @card.status.include?('Founder') %>
     <%= render 'shared/card_simple_founder' %>
   <% end %>
+>>>>>>> 25cb4d2803931c64d8321d267bacab67199cc03a
   </div>
   <div class="container-card-description">
     <h5> Description </h5>

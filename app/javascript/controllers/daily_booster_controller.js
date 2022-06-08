@@ -1,9 +1,15 @@
 import { Controller } from "stimulus"
 
 export default class extends Controller {
-  static targets = ["a", "p"]
-  disabled() {
-    this.aTarget.classList.add("d-none")
-    this.pTarget.classList.remove("d-none")
+  static targets = ["card"]
+
+  connect() {
+    console.log("hello");
+    console.log(this.cardTarget);
+    setTimeout(() => {
+      this.cardTargets.forEach((card) => {
+        card.classList.add('active')
+      })
+    }, 200);
   }
 }

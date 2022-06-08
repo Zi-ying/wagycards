@@ -19,8 +19,9 @@
 
     <%= render 'shared/navbar' unless current_page?(controller: '/pages', action: 'home') %>
     <%= render 'shared/flashes' %>
-
-    <%= yield %>
+    <div class="flex-grow-1">
+      <%= yield %>
+    </div>
     <%= render "shared/footer" %>
   </body>
 </html>
