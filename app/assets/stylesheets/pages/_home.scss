@@ -102,7 +102,7 @@ h1{
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
-  width: 200px;
+  width: 150px;
 }
 
 
@@ -191,6 +191,7 @@ background: linear-gradient(90deg, rgb(77, 244, 255) 0%, transparent 100%);
   margin-top: 20px;
 }
 
-.btn_bottom {
-  margin-left: 200px;
+.btn-bottom {
+  display: flex;
+  justify-content: center;
 }
