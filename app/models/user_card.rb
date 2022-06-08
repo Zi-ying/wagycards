@@ -5,10 +5,12 @@ class UserCard < ApplicationRecord
 
 
   validates_uniqueness_of :card_id, scope: [:user_id]
-  
+
   include PgSearch::Model
-  pg_search_scope :search_by_card_characteristic,
-    against: [ :first_name, :last_name, :github, :batch_date, :batch, :city, :status ],
+  pg_search_scope :global_search,
+    associated_against: {
+      card: [ :first_name, :last_name, :github, :batch_date, :batch, :city, :status ]
+    },
     using: {
     tsearch: { prefix: true }
   }
