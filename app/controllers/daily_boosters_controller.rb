@@ -1,7 +1,7 @@
 class DailyBoostersController < ApplicationController
   def new
     @can_use_booster = true
-    if cookies[:booster]
+    if cookies[:booster].present?
       booster = JSON.parse(cookies[:booster])
       if booster["user_id"] == current_user.id && booster["time"] < Time.now
         @next_booster_date = booster["time"].to_datetime

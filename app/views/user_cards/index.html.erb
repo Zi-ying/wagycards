@@ -7,7 +7,7 @@
 </div>
 
 <div class="container-cards-index problem-height">
-  <% @user.cards.map do |card| %>
+  <% @user_cards.map(&:card).map do |card| %>
     <% if card.status.include?('alumni') %>
       <%= render 'shared/game_card_alumni', card: card %>
     <% elsif card.status.include?('TA') %>

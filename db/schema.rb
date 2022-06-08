@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2022_06_05_161102) do
+ActiveRecord::Schema.define(version: 2022_06_07_143557) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -40,7 +40,9 @@ ActiveRecord::Schema.define(version: 2022_06_05_161102) do
     t.bigint "participation_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.bigint "user_card_id"
     t.index ["participation_id"], name: "index_participation_cards_on_participation_id"
+    t.index ["user_card_id"], name: "index_participation_cards_on_user_card_id"
   end
 
   create_table "participations", force: :cascade do |t|
@@ -92,6 +94,7 @@ ActiveRecord::Schema.define(version: 2022_06_05_161102) do
   end
 
   add_foreign_key "participation_cards", "participations"
+  add_foreign_key "participation_cards", "user_cards"
   add_foreign_key "participations", "games"
   add_foreign_key "participations", "users"
   add_foreign_key "round_cards", "participation_cards"

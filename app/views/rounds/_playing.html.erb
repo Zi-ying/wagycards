@@ -1,21 +1,30 @@
 <div class="container-round">
   <div class="player">
     <div class="info-user">
-      <h5>You're playing against <%= Participation.where(game: @game).where.not(user_id: current_user.id).map(&:user).first.username %></h5>
+      <h5>You're playing against <%= Participation.where(game: @game).where.not(user_id: current_user.id).map(&:user).first %></h5>
     </div>
   </div>
   <div class="playground">
+  <div><% @round.available_round_cards_for(current_user).each do |round_card| %>
+    <p><%= round_card %></p>
+    <% end %>
+  </div>
     <div class="logo-wagycards"></div>
   </div>
+  <div><%= @round.available_round_cards_for(@game.opponent_for(current_user)).each %></div>
    <div class="player">
-    <div class="cards">
-     <% current_user.cards.map do |card| %>
-        <% if card.status.include?('alumni') %>
-            <%= render 'shared/game_card_alumni', card: card %>
-        <% elsif card.status.include?('TA') %>
-          <%= render 'shared/game_card_ta', card: card %>
-        <% elsif card.status.include?('Teacher') %>
-          <%= render 'shared/game_card_teacher', card: card %>
+    <div class="cards" data-controller="round_card">
+     <% @participation.participation_cards.map do |participation_card| %>
+        <%= link_to round_round_cards_path(@round.id, selected_card: participation_card.id), method: :post do %>
+          <div data-action="click->round_card#select" data-target="card_click">
+            <% if participation_card.user_card.card.status.include?('alumni') %>
+                <%= render 'shared/game_card_alumni', card: participation_card.user_card.card %>
+            <% elsif participation_card.user_card.card.status.include?('TA') %>
+              <%= render 'shared/game_card_ta', card: participation_card.user_card.card %>
+            <% elsif participation_card.user_card.card.status.include?('Teacher') %>
+              <%= render 'shared/game_card_teacher', card: participation_card.user_card.card %>
+            <% end %>
+          </div>
         <% end %>
       <% end %>
     </div>

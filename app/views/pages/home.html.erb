@@ -55,6 +55,14 @@
       <p class="gold_circle mt-4"></p>
       <p><span class="card_point_description">card teacher :</span> 11 points !</p>
     </div>
+
+    <div class="card-intro-part">
+      <% @card_founder.map do |card| %>
+        <%= render 'shared/game_card_founder', card: card %>
+      <% end %>
+      <p class="gold_circle mt-4"></p>
+      <p><span class="card_point_description">card founder :</span> 12 points !</p>
+    </div>
   </div>
 
 

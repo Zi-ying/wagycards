@@ -44,9 +44,34 @@
   position: relative;
   border-radius: 15px;
   box-shadow: -1px 15px 30px -12px black;
+  margin: 20px;
+}
+
+.card-show-founder {
+  width: 300px;
+  height: 550px;
+  color: white;
+  position: relative;
+  border-radius: 15px;
+  box-shadow: -1px 15px 30px -12px black;
+  margin: 20px;
+  animation: neon1 1.5s ease-in-out infinite alternate;
+}
+
+
+.card-show-alumni {
   background-color: $A;
   background-image: linear-gradient(315deg, #FD1015 35%, #eb5f61 75%);
-  margin: 20px;
+}
+
+.card-show-teacher {
+  background-color: $T;
+  background-image: linear-gradient(315deg, #d09d1f 35%, #ebbd47 74%);
+}
+
+.card-show-ta {
+  background-color: $TA;
+  background-image: linear-gradient(315deg, #fda9c5 35%, #89efec 75%);
 }
 
 .card-img {
@@ -99,4 +124,19 @@
 .github-icon {
   font-weight: 700;
   font-size: 40px;
+}
+
+@keyframes neon1 {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #fff, 0 0 40px #d09d1f,
+      0 0 70px #d09d1f, 0 0 80px #d09d1f, 0 0 100px #d09d1f, 0 0 300px #d09d1f;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #d09d1f,
+      0 0 35px #d09d1f, 0 0 40px #d09d1f, 0 0 50px #d09d1f, 0 0 100px #d09d1f;
+  }
+  to {
+    text-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #ff1177,
+      0 0 35px #ff1177, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 100px #ff1177;
+    box-shadow: 0 0 5px #fff, 0 0 10px #fff, 0 0 15px #fff, 0 0 20px #d09d1f,
+    0 0 35px #d09d1f, 0 0 40px #ff1177, 0 0 50px #ff1177, 0 0 100px #ff1177;
+  }
 }

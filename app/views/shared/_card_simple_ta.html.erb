@@ -1,6 +1,18 @@
+<<<<<<< HEAD:app/views/shared/_card_simple.html.erb
 <div class="flip-card" data-daily-booster-target="card">
   <div class="flip-card-inner">
     <div class="flip-card-front card_back crossrotate">
+=======
+
+<div class="card-show card-show-ta">
+  <div class="card-img" style="background-image: url( <%= asset_path(@card.avatar)%>) ">
+  </div>
+
+  <div class="card-infos">
+    <div>
+      <h5><%= @card.first_name %> <%= @card.last_name %></h5>
+      <h6><%= @card.status.upcase %></h6>
+>>>>>>> 25cb4d2803931c64d8321d267bacab67199cc03a:app/views/shared/_card_simple_ta.html.erb
     </div>
     // put other type of cards
     <div class="flip-card-back game-card">
