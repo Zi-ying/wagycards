@@ -22,6 +22,20 @@ $TA: #f37ca3;
   }
 }
 
+.opponent_close_card {
+  width: 150px;
+  margin-left: -130px;
+}
+
+.user_close_card {
+  width: 150px;
+  margin-right: -130px;
+}
+
+.disabled{
+  opacity: 0.2;
+}
+
 .game-card-image {
   background-size: cover;
   background-position: center;
