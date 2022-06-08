@@ -1,5 +1,8 @@
 <% @cards.each do |card| %>
-    <div>
+    <div class="problem-height daily_show">
+    <%# <%= render 'shared/card_simple'%>
+    <%# <%= render 'shared/game_card_alumni', card: participation_card.user_card.card %>
     <%= card.first_name %>
+    <%= card.last_name %>
   </div>
 <% end %>
