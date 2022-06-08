@@ -2,7 +2,7 @@
 <% when "pending" %>
     <%= render "waiting.html.erb" %>
 <% when "playing" %>
-    <%= render "playing.html.erb" %>
+    <%= render "playing.html.erb", participation_cards: @participation_cards, round: @round%>
 <% when "done" %>
 <%# <% if current_user.participation_cards.round_cards.progress = "win" > current_user.participation_cards.round_cards.progress = "lost" %> %>
     <%= render "winner.html.erb" %>

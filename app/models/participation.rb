@@ -6,7 +6,7 @@ class Participation < ApplicationRecord
 
   def create_participation_cards
     user.user_cards.sample(8).each do |user_card|
-      Participation_card.create(user_card: user_card, participation: self)
+      ParticipationCard.create!(user_card_id: user_card.id, participation: self)
     end
   end
 end
