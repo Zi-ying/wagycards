@@ -42,8 +42,13 @@
           </div>
         <% end %>
       </div>
-      <div class="container-best-players">
-        <p>Best players</p>
+      <div class="container-best">
+        <div class="container-best-players">
+          <p>Best players</p>
+        </div>
+        <% @users.map do |card| %>
+        <p> <%= card.username %> - <%= card.cards.length %> <%= card.cards.length <= 1 ? 'card' : 'cards' %> </p>
+        <% end %>
       </div>
     </div>
   </div>
@@ -52,10 +57,9 @@
 <div class="container-show">
   <h2 class="show-title">Get to know more people...</h2>
   <div class="container-card-index">
-    <% @cards.map do |card| %>
+    <% @cards_read_more.map do |card| %>
     <div class="card-index">
       <figure class="card-index__thumb">
-        <%# <img class="card-index__image"> %>
         <%= image_tag card.avatar, class:'bck'%>
         <figcaption class="card-index__caption">
           <h2 class="card-index__title"><%= card.first_name %> <%= card.last_name %></h2>

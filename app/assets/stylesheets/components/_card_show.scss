@@ -44,9 +44,22 @@
   position: relative;
   border-radius: 15px;
   box-shadow: -1px 15px 30px -12px black;
+  margin: 20px;
+}
+
+.card-show-alumni {
   background-color: $A;
   background-image: linear-gradient(315deg, #FD1015 35%, #eb5f61 75%);
-  margin: 20px;
+}
+
+.card-show-teacher {
+  background-color: $T;
+  background-image: linear-gradient(315deg, #d09d1f 35%, #ebbd47 74%);
+}
+
+.card-show-ta {
+  background-color: $TA;
+  background-image: linear-gradient(315deg, #fda9c5 35%, #89efec 75%);
 }
 
 .card-img {

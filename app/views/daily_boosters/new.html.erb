@@ -1,15 +1,35 @@
-<div class="user-cards-index-text">
-  <h1>My daily cards</h1>
-</div>
+<div id="cards-wrapper" class="daily-wrapper">
+  <div class="user-cards-index-text border-bottom">
+    <h1>My daily cards</h1>
+  </div>
 
-<div class="container-cards-index problem-height">
-  <%# <% @user.cards.map do |card| %>
-    <%# <% if card.status.include?('alumni') %>
-      <%# <%= render 'shared/game_card_alumni', card: card %>
-    <%# <% elsif card.status.include?('TA') %>
-      <%# <%= render 'shared/game_card_ta', card: card %>
-    <%# <% elsif card.status.include?('Teacher') %>
-      <%# <%= render 'shared/game_card_teacher', card: card %>
+  <div class="problem-height daily_container">
+
+    <%# <% @user.cards.map do |card| %>
+      <%# <% if card.status.include?('alumni') %>
+        <%# <%= render 'shared/game_card_alumni', card: card %>
+      <%# <% elsif card.status.include?('TA') %>
+        <%# <%= render 'shared/game_card_ta', card: card %>
+      <%# <% elsif card.status.include?('Teacher') %>
+        <%# <%= render 'shared/game_card_teacher', card: card %>
+      <%# <% end %>
     <%# <% end %>
-  <%# <% end %>
+    <% if @can_use_booster %>
+    <%= link_to 'Get my daily cards',
+                daily_boosters_path,
+                method: :post,
+                id: "new_booster_btn",
+                class: "rainbow-button",
+                remote: true %>
+  <% else %>
+    <div class="booster_later">Booster opened <%= @next_booster_date.strftime("%d/%m, %H:%M")  %> </div>
+  <% end %>
+
+    <div class="booster_cards">
+      <div class="card_back crossrotate"></div>
+      <div class="card_back crossrotate"></div>
+      <div class="card_back crossrotate"></div>
+      <div class="card_back crossrotate"></div>
+    </div>
+  </div>
 </div>

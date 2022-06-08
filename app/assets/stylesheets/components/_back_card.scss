@@ -1,0 +1,42 @@
+.card_back {
+  background-image: url('question.png');
+  background-position: center;
+  background-size: cover;
+  height: 350px;
+  width: 250px;
+  border-radius: 10px;
+  border: 3px solid red;
+  margin: 32px;
+  // animation: 0.4s cardBouncing infinite;
+  // animation-direction: alternate-reverse;
+}
+
+.crossrotate {
+  -webkit-transition-duration: 0.5s;
+  -moz-transition-duration: 0.5s;
+  -o-transition-duration: 0.5s;
+   transition-duration: 0.5s;
+  -webkit-transition-property: -webkit-transform;
+  -moz-transition-property: -moz-transform;
+  -o-transition-property: -o-transform;
+   transition-property: transform;
+}
+
+.crossrotate:hover {
+  -webkit-transform: rotate(20deg);
+  -ms-transform: rotate(20deg);
+   transform: rotate(20deg);
+}
+// @keyframes cardBouncing {
+//   from {
+//     transform: rotate3d(0, 0, 1, 0deg);
+//     transform-origin: top left;
+//     animation-timing-function: ease-in-out;
+//   }
+
+//  to {
+//     transform: rotate3d(0, 0, 1, 10deg);
+//     transform-origin: top left;
+//     animation-timing-function: ease-in-out;
+//   }
+// }

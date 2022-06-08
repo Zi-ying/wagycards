@@ -1,5 +1,6 @@
 .btn-effect{
-  box-shadow: -1px 15px 30px -12px black;
+  box-shadow: -1px 15px 60px -12px black;
+  text-shadow: 0px 0px 1px black;
   background-color: $A;
   background-image: linear-gradient(315deg, #FD1015 35%, #eb5f61 75%);
   &:hover {
@@ -21,4 +22,10 @@
   80% { transform: translate(-1px, -1px) rotate(1deg); }
   90% { transform: translate(1px, 2px) rotate(0deg); }
   100% { transform: translate(1px, -2px) rotate(-1deg); }
+}
+
+@keyframes slidebg {
+  to {
+    background-position:20vw;
+  }
 }
