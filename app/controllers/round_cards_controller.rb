@@ -7,7 +7,7 @@ class RoundCardsController < ApplicationController
     @round_card.save
     @finished = @round.finished_for?(current_user)
     if @finished
-      flash[:alert] = "round winner : #{@round.winner.username}"
+      flash[:alert] = "round winner : #{@round.winner(current_user).username}"
       @round.game.update(progress: "done") if @round.game.is_finished?
     end
     redirect_to round_path(@round.game.rounds.last)

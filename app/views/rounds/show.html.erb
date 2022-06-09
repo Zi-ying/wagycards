@@ -4,9 +4,9 @@
 <% when "playing" %>
     <%= render "playing.html.erb", participation_cards: @participation_cards, round: @round%>
 <% when "done" %>
-<%# <% if current_user.participation_cards.round_cards.progress = "win" > current_user.participation_cards.round_cards.progress = "lost" %> %>
+ <% if current_user.participations.last.participation_cards.flat_map {|card| card.round_cards.filter{|card|card.progress == "win"}}.count - current_user.participations.last.participation_cards.flat_map {|card| card.round_cards.filter{|card|card.progress == "loose"}}.count > 0%>
     <%= render "winner.html.erb" %>
-<%# <% else  %> %>
+  <% else  %>
     <%= render "looser.html.erb" %>
-  <%# <% end %> %>
+  <% end %>
 <% end %>
