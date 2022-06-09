@@ -11,4 +11,8 @@ class User < ApplicationRecord
   def online?
     updated_at > 2.minutes.ago
   end
+
+  def self.sort_by_cards
+    User.all.sort_by { |user| -user.cards.size }
+  end
 end
