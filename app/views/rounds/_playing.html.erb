@@ -26,10 +26,23 @@
         <% end %></div>
     </div>
   </div>
+  <div>
+
+
+  <div>
+    <% unless @result.nil? %>
+      <span data-controller="result" data-result-target="resultat" class="d-none"><%= @result %></span>
+    <% end %>
+  </div>
+
+
+
+
+  </div>
     <% if @round.available_round_cards_for(current_user).any? && @round.available_round_cards_for(@game.opponent_for(current_user)).empty? %>
     <hr>
-    <div class="mr200">
-      <%= link_to "refresh", next_round_path(@round.game.id), class: "login_btn"%>
+    <div data-controller="result">
+      <%= link_to "refresh", next_round_path(@round.game.id), html: { data_result_target: "refresh "}, class: "login_btn" %>
     </div>
     <br>
     <br>
