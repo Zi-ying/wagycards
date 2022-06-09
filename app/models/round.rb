@@ -19,6 +19,23 @@ class Round < ApplicationRecord
     winner
   end
 
+  def loser(user)
+    loser = nil
+    game = self.game
+    opponent = game.opponent_for(user)
+    user_round_card = self.played_round_cards_for(user).last
+    opponent_round_card = self.played_round_cards_for(opponent).last
+    if opponent_round_card && user_round_card
+      result = opponent_round_card.points - user_round_card.points
+      if result.positive?
+        loser = user
+      else
+        loser = opponent
+      end
+    end
+    loser
+  end
+
   def finished_for?(user)
     game = self.game
     opponent = game.opponent_for(user)

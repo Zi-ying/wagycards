@@ -1,5 +1,7 @@
 class RoundsController < ApplicationController
   def show
+    @last_winner = params[:winner]
+    @result = @last_winner == current_user.username unless @last_winner.nil?
     @round = Round.find(params[:id])
     @game = @round.game
     @participation = Participation.find_by(user: current_user, game: @game)
