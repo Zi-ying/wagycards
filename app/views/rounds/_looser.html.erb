@@ -1,4 +1,12 @@
-<div class="container">
-  <div>You lost !</div>
+<div class="result-container">
+
+  <div class="result-msg">You lost !</div>
+  <div class="result-img">
+    <%= image_tag("lose.png", width:"300px", alt: "lose game") %>
+  </div>
+  <div class="choose">
+  <%= link_to "Play again ?",  games_path, method: :post, class:"main-btn", id:"center"%>
+  <%= link_to "Quit", new_user_session_path, class: "play_btn", id:"center" %>
+  </div>
 
 </div>
