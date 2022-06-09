@@ -48,9 +48,11 @@
         <div class="container-best-players">
           <p>Best players</p>
         </div>
-        <% @users.map do |card| %>
-        <p> <%= card.username %> - <%= card.cards.length %> <%= card.cards.length <= 1 ? 'card' : 'cards' %> </p>
+        <% @users_sorted.each do |user| %>
+          <p> <%= user.username %> - <%= user.cards.length %> cards </p>
         <% end %>
+          <hr>
+          <p> You<% @user.username %> - <%= @user.cards.length %> cards </p>
       </div>
     </div>
   </div>
