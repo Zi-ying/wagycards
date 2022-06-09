@@ -1,26 +1,19 @@
-<div id="cards-wrapper" class="daily-wrapper" >
-  <div class="user-cards-index-text border-bottom">
+<div id="cards-wrapper" class="daily-wrapper">
+  <div class="user-cards-index-text">
     <h1>My daily cards</h1>
   </div>
 
-  <div class="problem-height daily_container">
+  <div class="daily_container">
 
     <% if @can_use_booster %>
     <%= link_to 'Get my daily cards',
                 daily_boosters_path,
                 method: :post,
                 id: "new_booster_btn",
-                class: "rainbow-button",
+              class: "rainbow-button",
                 remote: true %>
   <% else %>
     <div>Booster opened <%= @next_booster_date.strftime("%d/%m, %H:%M")  %> </div>
   <% end %>
-
-    <div class="booster_cards">
-        <div class="card_back crossrotate"></div>
-        <div class="card_back crossrotate"></div>
-        <div class="card_back crossrotate"></div>
-        <div class="card_back crossrotate"></div>
-    </div>
   </div>
 </div>
