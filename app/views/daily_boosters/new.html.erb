@@ -13,7 +13,7 @@
               class: "rainbow-button",
                 remote: true %>
   <% else %>
-    <div>Booster opened <%= @next_booster_date.strftime("%d/%m, %H:%M")  %> </div>
+    <div style="font-size: 25px;margin-top: 10%;color">Sorry, come back tomorrow to get new cards 🃏 ! Waiting date : <%= @next_booster_date.strftime("%d/%m, %H:%M")  %> </div>
   <% end %>
   </div>
 </div>

@@ -1,4 +1,6 @@
-<div class="container-round">
+<div class="container-round"
+  data-controller="round-subscription"
+  data-round-subscription-round-id-value="<%= @round.id %>">
   <div class="player">
     <div class="info-user">
       <h5>You're playing against <%= Participation.where(game: @game).where.not(user_id: current_user.id).map(&:user).first.username %></h5>
@@ -38,7 +40,7 @@
     <hr>
     <% else %>
    <div class="player">
-      <div class="cards" data-controller="round_card">
+      <div class="cards" data-round-subscription-target="card">
       <% @participation.participation_cards.each do |participation_card| %>
           <% if participation_card.round_cards.empty? %>
           <%= link_to round_round_cards_path(@round.id, selected_card: participation_card.id), method: :post do %>
