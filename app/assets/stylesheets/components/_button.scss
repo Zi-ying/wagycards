@@ -105,3 +105,24 @@
 .rainbow-button:hover {
   animation:slidebg 2s linear infinite;
 }
+
+.rainbow-button-github {
+  margin-top: 50px;
+  text-decoration:none;
+  color: linear-gradient(90deg, #00C0FF 0%, #FFCF00 49%, #FC4F4F 80%, #00C0FF 100%);;
+  height: 120px;
+  width: 90%;
+  padding: 14px;
+  // background-image:
+  border-radius:5px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  text-transform:uppercase;
+  font-size: 100px;
+  font-weight:bold;
+}
+
+.rainbow-button-github:hover {
+  animation:slidebg 2s linear infinite;
+}

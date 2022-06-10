@@ -97,7 +97,7 @@
         <%= image_tag("collect.png", alt:"collect people", height:"600px") %>
       </div>
     </div>
-    <div class="btn-bottom">
+    <div class="btn-bottom" id='btn-home-bottom'>
       <%= link_to user_signed_in? ? user_path(current_user) : new_user_session_path do %>
       <input type="button" value ="begin" class="play_btn">
       <% end %>

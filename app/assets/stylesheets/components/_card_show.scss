@@ -11,9 +11,14 @@
 
 .container-card-description {
   padding: 40px;
+  width: 80%;
+  justify-content: center;
   h5 {
     padding: 20px 0;
     text-shadow: 0px 0px 1px rgb(7, 7, 7);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 32px;
   }
 }
 
@@ -26,13 +31,19 @@
 .card-show-title {
   text-align:center;
   padding: 20px;
-  text-shadow: 0px 0px 1px rgb(7, 7, 7);
+  h2 {
+    text-shadow: 0px 0px 1px rgb(7, 7, 7);
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-size: 43px;
+  }
 }
 
 .container-card-one {
   display: flex;
   align-content: center;
   justify-content: center;
+  padding-left: 40px;
 }
 
 
@@ -123,6 +134,11 @@
 .github-icon {
   font-weight: 700;
   font-size: 40px;
+}
+
+.github-icon-show {
+  font-weight: 700;
+  font-size: 100px;
 }
 
 @keyframes neon1 {
